@@ -39,7 +39,7 @@ console.log('Hello world!');
 // burger menu
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js 
 
-let burger_menu = document.getElementsByClassName('burger-menu');
+let burger_menu = document.querySelector('.burger-menu');
 
 burger_menu.addEventListener('click', function() {
     burger_menu.classList.toggle('change');
