@@ -28,6 +28,22 @@ header {
   transform: translate(0, -11px)rotate(45deg);
 }
 
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 h1 {
   color: #ff69b4;
   font-family: cursive;
