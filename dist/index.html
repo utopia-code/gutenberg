@@ -20,25 +20,27 @@ https://gutenberg-bio.netlify.app/
 	</head>
 	<body>
 		<header>
-			<nav>
-				<div class="logo"><span class="special-typo">Gutenberg</span></div>
-				<ul>
-					<li><div><a href="/index.html" class="">Inicio</a></div></li>
-					<li><div><a href="/tipos-moviles.html">Tipos móviles</a></div></li>
-					<li><div><a href="/bio.html">Biografía</a></div></li>
-					<li><div><a href="/enlaces.html">Enlaces</a></div></li>
-				</ul>
-				<div class="burger-menu">
-					<div class="bar-top"></div>
-					<div class="bar-center"></div>
-					<div class="bar-bottom"></div>
+			<nav class="nav">
+				<div class="nav-open">
+					<ul>
+						<li><a href="/index.html">Inicio</a></li>
+						<li><a href="/tipos-moviles.html">Tipos móviles</a></li>
+						<li><a href="/bio.html">Biografía</a></li>
+						<li><a href="/enlaces.html">Enlaces</a></li>
+					</ul>
 				</div>
+				<div class="nav-collapsed"><div class="nav-collapsed-inner"><div class="logo"><span class="special-typo">Gutenberg</span></div></div></div>
 			</nav>
+			<div class="burger-menu">
+				<div class="bar-top"></div>
+				<div class="bar-center"></div>
+				<div class="bar-bottom"></div>
+			</div>
 		</header>
-		<article>
-			<h1><span class="gg">Gutenberg</span> y la cultura moderna</h1>
+		<article class="header-collapsed">
 			<section>
 				<div class="container">
+					<h1><span class="gg">Gutenberg</span> y la cultura moderna</h1>
 					<div>
 						<p>Según los expertos nos encontramos actualmente en la generación del séptimo <i lang="en">mass media</i>: el móvil, 
 							que convive con todos los demás <b>medios de comunicación de masas</b>, listados a continuación por orden 
@@ -64,7 +66,7 @@ https://gutenberg-bio.netlify.app/
 						que la alianza entre matrices, tinta y papel permitiera multiplicar un documento, solución que haría que 
 						la población de Europa y, más tarde, de América, pasara más rápidamente a ser alfabetizada y culta y, sobre todo, 
 						que el libro dejara de ser un bien exclusivo del clero, de las universidades y de los patricios.</p>
-					<div><p class="h3"><a href="/bio.html">Biografía <span class="arrow-link"></span></a></p></div>
+					<div class="special-link"><a href="/bio.html">Biografía</a><span class="arrow-link"></span></div>
 				</div>
 			</section>
 			<section>
@@ -123,7 +125,7 @@ https://gutenberg-bio.netlify.app/
 							</div>
 						</div>
 					</div>
-					<div><p class="h3"><a href="/enlaces.html">Enlaces <span class="arrow-link"></span></a></p></div>
+					<div class="special-link"><a href="/enlaces.html">Enlaces</a><span class="arrow-link"></span></div>
 				</div>
 			</section>
 			<section>
@@ -134,7 +136,8 @@ https://gutenberg-bio.netlify.app/
 						Por una parte, la creación de tipos fundidos en metal, por otra, el haber pensado que combinando letras, números y 
 						puntuaciones se podían crear palabras y líneas, que podían articular un relato entero y que, además, las letras devueltas 
 						al comodín se podían utilizar de nuevo para hacer otros impresos.</p>
-					<div><p class="h3"><a href="/tipos-moviles.html">Tipos móviles <span class="arrow-link"></span></a></p></div>
+					<div><p class="h3"><a href=""> <span class="arrow-link"></span></a></p></div>
+					<div class="special-link"><a href="/tipos-moviles.html">Tipos móviles</a><span class="arrow-link"></span></div>
 				</div>
 			</section>
 		</article>

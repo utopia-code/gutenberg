@@ -565,8 +565,12 @@ function hmrAcceptRun(bundle, id) {
 // burger menu
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js 
 let burger_menu = document.querySelector(".burger-menu");
+let nav = document.querySelector(".nav");
+let content = document.querySelector(".header-collapsed");
 burger_menu.addEventListener("click", function() {
     burger_menu.classList.toggle("change");
+    nav.classList.toggle("collapsed");
+    content.classList.toggle("top-to-header");
 }) // infinity carousel
  // https://codepen.io/hmdshfq/pen/JjrZNgP
 ;
