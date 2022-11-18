@@ -17,15 +17,17 @@ nav {
 }
 
 .gg {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: red;
     margin: 1rem 0;
     text-transform: uppercase;
     &.gg-1 {
         font-family: 'Dela Gothic One', cursive;
+        font-size: 2.2rem;
     }
     &.gg-2 {
         font-family: 'Grenze Gotisch', cursive;
+        text-transform: none;
     }
     &.gg-3 {
         font-family: 'Joan', serif;
@@ -50,6 +52,7 @@ nav {
     }
     &.gg-10 {
         font-family: 'UnifrakturMaguntia', cursive;
+        text-transform: none;
     }
     &.gg-11 {
         font-family: 'Yatra One', cursive;
