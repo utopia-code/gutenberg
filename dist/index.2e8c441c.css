@@ -28,8 +28,8 @@ nav {
 }
 
 .gg.gg-2 {
-  text-transform: none;
   font-family: Grenze Gotisch, cursive;
+  font-size: 3rem;
 }
 
 .gg.gg-3 {
@@ -61,12 +61,16 @@ nav {
 }
 
 .gg.gg-10 {
-  text-transform: none;
   font-family: UnifrakturMaguntia, cursive;
+  font-size: 3rem;
 }
 
 .gg.gg-11 {
   font-family: Yatra One, cursive;
+}
+
+.gg.no-uppercase {
+  text-transform: none;
 }
 
 header {

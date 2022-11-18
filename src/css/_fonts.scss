@@ -27,7 +27,7 @@ nav {
     }
     &.gg-2 {
         font-family: 'Grenze Gotisch', cursive;
-        text-transform: none;
+        font-size: 3rem;
     }
     &.gg-3 {
         font-family: 'Joan', serif;
@@ -52,9 +52,12 @@ nav {
     }
     &.gg-10 {
         font-family: 'UnifrakturMaguntia', cursive;
-        text-transform: none;
+        font-size: 3rem;
     }
     &.gg-11 {
         font-family: 'Yatra One', cursive;
+    }
+    &.no-uppercase {
+        text-transform: none;
     }
 }
