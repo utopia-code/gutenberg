@@ -27,13 +27,21 @@ header {
                 font-size: 2rem;
                 color: white;
                 text-decoration: none;
-                transition: color 1s cubic-bezier(.19,1,.22,1);
+                transition: color .25s cubic-bezier(.19,1,.22,1);
                 &:hover {
+                    color: red;
+                }
+                &.is-active {
                     color: red;
                 }
             }
             &:last-child {
                 padding-right: 0;
+            }
+            @media screen and (max-width: 600px) {
+                a {
+                    font-size: 1rem;
+                }
             }
         }
     }
@@ -55,7 +63,7 @@ header {
         bottom: 0;
         left: 0;
         // height: $top_distance_nav;
-        background-color: black;
+        // background-color: black;
         display: block;
         width: 100%;
         padding: .625rem 1.25rem .5rem 1.25rem;
@@ -97,7 +105,7 @@ header {
     transform: translateY(105px);
     &.top-to-header {
         transition: transform .4s cubic-bezier(.25,.46,.45,.94), padding-top .3s cubic-bezier(.25,.46,.45,.94);
-        transform: translateY(65px);
+        transform: translateY(66px);
     }
 }
 

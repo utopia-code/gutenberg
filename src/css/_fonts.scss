@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Raleway:wght@100;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Grenze+Gotisch&family=Joan&family=Playfair+Display:wght@800&family=Rasa:wght@500&family=STIX+Two+Text:wght@700&family=Spinnaker&family=Syne:wght@700&family=Trykker&family=UnifrakturMaguntia&family=Yatra+One&display=swap');
 
 body {
     font-family: 'Cormorant Garamond', serif;
@@ -15,3 +16,42 @@ nav {
     font-weight: 900;
 }
 
+.gg {
+    font-size: 4rem;
+    color: red;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    &.gg-1 {
+        font-family: 'Dela Gothic One', cursive;
+    }
+    &.gg-2 {
+        font-family: 'Grenze Gotisch', cursive;
+    }
+    &.gg-3 {
+        font-family: 'Joan', serif;
+    }
+    &.gg-4 {
+        font-family: 'Playfair Display', serif;
+    }
+    &.gg-5 {
+        font-family: 'Rasa', serif;
+    }
+    &.gg-6 {
+        font-family: 'Spinnaker', sans-serif;
+    }
+    &.gg-7 {
+        font-family: 'STIX Two Text', serif;
+    }
+    &.gg-8 {
+        font-family: 'Syne', sans-serif;
+    }
+    &.gg-9 {
+        font-family: 'Trykker', serif;
+    }
+    &.gg-10 {
+        font-family: 'UnifrakturMaguntia', cursive;
+    }
+    &.gg-11 {
+        font-family: 'Yatra One', cursive;
+    }
+}
