@@ -43,7 +43,7 @@ a {
         position: relative;
         top: 3px;
         left: 1rem;
-        transition: left 1s cubic-bezier(.19,1,.22,1);
+        transition: left .3s cubic-bezier(.19,1,.22,1);
     }
     &:hover {
         .arrow-link {

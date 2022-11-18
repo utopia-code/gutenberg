@@ -15,66 +15,28 @@ nav {
   font-weight: 900;
 }
 
-.gg {
+.logo, .gg, .gg-letter {
   color: red;
-  text-transform: uppercase;
-  margin: 1rem 0;
-  font-size: 2.5rem;
-}
-
-.gg.gg-1 {
-  font-family: Dela Gothic One, cursive;
-  font-size: 2.2rem;
-}
-
-.gg.gg-2 {
-  font-family: Grenze Gotisch, cursive;
-  font-size: 3rem;
-}
-
-.gg.gg-3 {
-  font-family: Joan, serif;
-}
-
-.gg.gg-4 {
-  font-family: Playfair Display, serif;
-}
-
-.gg.gg-5 {
-  font-family: Rasa, serif;
-}
-
-.gg.gg-6 {
-  font-family: Spinnaker, sans-serif;
-}
-
-.gg.gg-7 {
-  font-family: STIX Two Text, serif;
-}
-
-.gg.gg-8 {
-  font-family: Syne, sans-serif;
-}
-
-.gg.gg-9 {
-  font-family: Trykker, serif;
-}
-
-.gg.gg-10 {
   font-family: UnifrakturMaguntia, cursive;
+}
+
+.logo {
+  text-transform: none;
   font-size: 3rem;
 }
 
-.gg.gg-11 {
-  font-family: Yatra One, cursive;
+.gg {
+  font-size: 3rem;
 }
 
-.gg.no-uppercase {
-  text-transform: none;
-}
-
-header {
+.gg-letter {
+  float: left;
+  padding: 0 1rem 0 0;
+  font-size: 9rem;
+  line-height: .8;
+  display: block;
   position: relative;
+  top: 1rem;
 }
 
 .nav {
@@ -86,8 +48,8 @@ header {
   background-color: #000;
   transition: transform .5s cubic-bezier(.25, .46, .45, .94);
   position: fixed;
-  top: 0;
-  transform: translateY(0);
+  top: 58px;
+  transform: translateY(-58px);
 }
 
 .nav ul {
@@ -95,6 +57,7 @@ header {
   padding-left: 0;
   list-style-type: none;
   display: flex;
+  overflow: hidden;
 }
 
 .nav ul li {
@@ -123,16 +86,10 @@ header {
   }
 }
 
-.nav.nav-home {
-  transform: translateY(-58px);
-}
-
 .nav .nav-open {
   z-index: 1;
-  align-items: flex-end;
   padding: 50px 1.25rem 1rem;
   transition: transform .5s cubic-bezier(.25, .46, .45, .94);
-  display: flex;
   position: relative;
   transform: translateY(0);
 }
@@ -140,8 +97,8 @@ header {
 .nav .nav-collapsed {
   width: 100%;
   z-index: 0;
-  padding: .625rem 1.25rem .5rem;
-  display: block;
+  background-color: #000;
+  padding: .5rem 0 0 1.25rem;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -154,22 +111,20 @@ header {
 
 .nav .nav-collapsed .logo {
   z-index: 0;
-  font-size: 2rem;
-  line-height: 1.5;
   transition: transform .4s cubic-bezier(.25, .46, .45, .94);
   position: relative;
-  top: 1px;
+  top: -3px;
   transform: translateY(100%);
 }
 
 .nav.collapsed {
   transition: transform .4s cubic-bezier(.25, .46, .45, .94);
-  transform: translateY(-48px);
+  transform: translateY(-100%);
 }
 
 .nav.collapsed .nav-open {
-  transition: transform .3s cubic-bezier(.25, .46, .45, .94), padding-top .3s cubic-bezier(.25, .46, .45, .94);
-  transform: translateY(-60px);
+  transition: transform .3s cubic-bezier(.25, .46, .45, .94);
+  transform: translateY(-58px);
 }
 
 .nav.collapsed .nav-collapsed .logo {
@@ -179,13 +134,13 @@ header {
 
 .header-collapsed {
   z-index: 999;
-  transition: transform .5s cubic-bezier(.25, .46, .45, .94);
-  transform: translateY(105px);
+  padding-top: 105px;
+  transition: padding-top .5s cubic-bezier(.25, .46, .45, .94);
 }
 
 .header-collapsed.top-to-header {
-  transition: transform .4s cubic-bezier(.25, .46, .45, .94), padding-top .3s cubic-bezier(.25, .46, .45, .94);
-  transform: translateY(66px);
+  padding-top: 58px;
+  transition: padding-top .4s cubic-bezier(.25, .46, .45, .94);
 }
 
 .burger-menu {
@@ -264,7 +219,7 @@ a:hover:after {
   background-image: url("arrow-right-thin.b3b5d67c.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  transition: left 1s cubic-bezier(.19, 1, .22, 1);
+  transition: left .3s cubic-bezier(.19, 1, .22, 1);
   display: inline-block;
   position: relative;
   top: 3px;
