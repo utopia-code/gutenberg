@@ -55,9 +55,21 @@ img {
 .typo-border {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: #fff;
-    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-width: 2.6px;
     @include mobile-breakpoint {
-        -webkit-text-stroke-width: 2.5px;
+        -webkit-text-stroke-width: 1.9px;
+    }
+    &.border-2 {
+        -webkit-text-stroke-width: 2px;
+        @include mobile-breakpoint {
+            -webkit-text-stroke-width: 1.4px;
+        }
+    }
+    &.border-4 {
+        -webkit-text-stroke-width: 4px;
+        @include mobile-breakpoint {
+            -webkit-text-stroke-width: 2.5px;
+        }
     }
 }
 
@@ -82,8 +94,8 @@ img {
 }
 
 .special-link {
-    display: inline-block;
     a {
+        display: inline-block;
         font-size: 2.6rem;
         text-transform: uppercase;
         font-family: 'Raleway', sans-serif;
@@ -100,5 +112,14 @@ img {
         top: 3px;
         left: 1rem;
         transition: left .3s cubic-bezier(.19,1,.22,1);
+    }
+    &.xs-link {
+        a {
+            font-size: 2rem;
+        }
+        .arrow-link {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 }

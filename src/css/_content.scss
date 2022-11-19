@@ -1,12 +1,56 @@
+.img-cover {
+    &::before {
+        content:"";
+        display: block;
+        width: 100%;
+        padding-top: 500px;
+        background-color: rgba(0,0,0,.2);
+        // @media screen and (max-width: 1400px) {
+        // }
+        // @media screen and (max-width: 991px) {
+        // }
+        // @include mobile-breakpoint {
+        // }
+    }
+    background-image: url('../images/bg-typography.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.cover-title {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: calc(100% - 2.50rem);
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    margin: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    font-size: calc(1.2rem + 4vw);
+    .cover-subtitle {
+        display: block;
+        font-size: calc(1.2rem + 1.8vw);
+        margin-top: 2rem;
+    }
+    // @include mobile-breakpoint {
+    // }
+}
+
 .home{
     .img-cover {
         position: relative;
         width: 100%;
+        background-image: none;
         &::before {
-            content:"";
-            display: block;
-            width: 100%;
             padding-top: calc(( 7 / 16) * 100%);
+            position: relative;
+            z-index: 1;
             @media screen and (max-width: 1400px) {
                 padding-top: calc(( 9 / 16) * 100%);
             }
@@ -29,22 +73,19 @@
         }
     }
     .cover-title {
-        position: absolute;
         bottom: 1.25rem;
-        left: 1.25rem;
-        z-index: 1;
-        color: white;
+        height: initial;
         font-size: calc(5rem + 9.5vw);
         margin: 0;
         line-height: .8;
+        text-align: left;
+        display: block;
         .typo-border {
             display: block;
         }
         @include mobile-breakpoint {
             text-align: center;
             margin: 0 auto;
-            width: 100%;
-            left: 0;
         }
     }
     .glide {
@@ -119,6 +160,58 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.typography-site, .bio-site, .museum-site {
+    .cover-title {
+        top: 0;
+    }
+}
+
+.typography-site {
+    .img-cover {
+        background-image: url('../images/bg-typography.jpeg');
+    }
+    .bg-image-box {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &::before {
+            content:"";
+            display: block;
+            width: 100%;
+            padding-top: calc(( 2 / 3) * 100%);
+        }
+        &.movable-types {
+            background-image: url('../images/movable-types-www-gutenber.jpg');
+        }
+        &.museum {
+            background-size: contain;
+            background-color: black;
+            background-image: url('../images/DBP-1961-349-Johannes-Gutenberg.jpg');
+        }
+        &.tour {
+            background-image: url('../images/tour-Mainz-monument-Gutenberg.jpg');
+        }
+        
+    }
+}
+
+.bio-site {
+    .img-cover {
+        background-position: top center;
+        background-image: url('../images/Mainz-Gutenbergdenkmal-Relief.jpg');
+    }
+}
+
+.museum-site {
+    .img-cover {
+        background-image: url('../images/Gutenberg-museum-tresorraum-bibeln.jpg');
+        &::before {
+            background-color: rgba(0,0,0,.3);
         }
     }
 }

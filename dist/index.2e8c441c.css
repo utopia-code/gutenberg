@@ -209,11 +209,31 @@ img.i-center {
 .typo-border {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: #fff;
-  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-width: 2.6px;
 }
 
 @media screen and (max-width: 767.89px) {
   .typo-border {
+    -webkit-text-stroke-width: 1.9px;
+  }
+}
+
+.typo-border.border-2 {
+  -webkit-text-stroke-width: 2px;
+}
+
+@media screen and (max-width: 767.89px) {
+  .typo-border.border-2 {
+    -webkit-text-stroke-width: 1.4px;
+  }
+}
+
+.typo-border.border-4 {
+  -webkit-text-stroke-width: 4px;
+}
+
+@media screen and (max-width: 767.89px) {
+  .typo-border.border-4 {
     -webkit-text-stroke-width: 2.5px;
   }
 }
@@ -239,14 +259,11 @@ img.i-center {
   transform: scaleX(-1);
 }
 
-.special-link {
-  display: inline-block;
-}
-
 .special-link a {
   text-transform: uppercase;
   font-family: Raleway, sans-serif;
   font-size: 2.6rem;
+  display: inline-block;
 }
 
 .special-link .arrow-link {
@@ -261,6 +278,15 @@ img.i-center {
   position: relative;
   top: 3px;
   left: 1rem;
+}
+
+.special-link.xs-link a {
+  font-size: 2rem;
+}
+
+.special-link.xs-link .arrow-link {
+  width: 2rem;
+  height: 2rem;
 }
 
 body {
@@ -521,39 +547,102 @@ section {
   display: flex;
 }
 
-.col-md-6 {
+.row.align-items-center {
+  align-items: center;
+}
+
+.col-md-6, .cd-md-4 {
   width: 100%;
   flex: 0 0 100%;
   padding: 0 20px;
 }
 
 @media screen and (min-width: 767.89px) {
-  .col-md-6 {
-    width: calc(50% - 40px);
+  .col-md-6, .cd-md-4 {
     flex: none;
   }
 }
 
-.col-md-6.uneven {
+.col-md-6.uneven, .cd-md-4.uneven {
   margin-top: 120px;
 }
 
 @media screen and (max-width: 767.89px) {
-  .col-md-6.uneven, .col-md-6.col-last {
+  .col-md-6.uneven, .cd-md-4.uneven, .col-md-6.col-last, .cd-md-4.col-last {
     margin-top: 50px;
   }
 }
 
+@media screen and (min-width: 767.89px) {
+  .col-md-6 {
+    width: calc(50% - 40px);
+  }
+}
+
+.cd-md-4 {
+  margin-bottom: 50px;
+}
+
+.cd-md-4:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 991px) {
+  .cd-md-4 {
+    width: calc(33.333% - 40px);
+    margin-bottom: 0;
+  }
+}
+
+.img-cover {
+  background-image: url("bg-typography.2bda6c51.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.img-cover:before {
+  content: "";
+  width: 100%;
+  background-color: #0003;
+  padding-top: 500px;
+  display: block;
+}
+
+.cover-title {
+  z-index: 1;
+  width: calc(100% - 2.5rem);
+  height: 500px;
+  text-align: center;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: calc(1.2rem + 4vw);
+  display: flex;
+  position: absolute;
+  left: 0;
+}
+
+.cover-title .cover-subtitle {
+  margin-top: 2rem;
+  font-size: calc(1.2rem + 1.8vw);
+  display: block;
+}
+
 .home .img-cover {
   width: 100%;
+  background-image: none;
   position: relative;
 }
 
 .home .img-cover:before {
-  content: "";
-  width: 100%;
+  z-index: 1;
   padding-top: 43.75%;
-  display: block;
+  position: relative;
 }
 
 @media screen and (max-width: 1400px) {
@@ -583,14 +672,13 @@ section {
 }
 
 .home .cover-title {
-  z-index: 1;
-  color: #fff;
+  height: initial;
+  text-align: left;
   margin: 0;
   font-size: calc(5rem + 9.5vw);
   line-height: .8;
-  position: absolute;
+  display: block;
   bottom: 1.25rem;
-  left: 1.25rem;
 }
 
 .home .cover-title .typo-border {
@@ -600,9 +688,7 @@ section {
 @media screen and (max-width: 767.89px) {
   .home .cover-title {
     text-align: center;
-    width: 100%;
     margin: 0 auto;
-    left: 0;
   }
 }
 
@@ -691,6 +777,55 @@ section {
     border-left-width: 40px;
     bottom: -40px;
   }
+}
+
+.typography-site .cover-title, .bio-site .cover-title, .museum-site .cover-title {
+  top: 0;
+}
+
+.typography-site .img-cover {
+  background-image: url("bg-typography.2bda6c51.jpeg");
+}
+
+.typography-site .bg-image-box {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.typography-site .bg-image-box:before {
+  content: "";
+  width: 100%;
+  padding-top: 66.6667%;
+  display: block;
+}
+
+.typography-site .bg-image-box.movable-types {
+  background-image: url("movable-types-www-gutenber.2d4fe378.jpg");
+}
+
+.typography-site .bg-image-box.museum {
+  background-color: #000;
+  background-image: url("DBP-1961-349-Johannes-Gutenberg.d3487b3d.jpg");
+  background-size: contain;
+}
+
+.typography-site .bg-image-box.tour {
+  background-image: url("tour-Mainz-monument-Gutenberg.390ba4e8.jpg");
+}
+
+.bio-site .img-cover {
+  background-image: url("Mainz-Gutenbergdenkmal-Relief.1e06e88e.jpg");
+  background-position: top;
+}
+
+.museum-site .img-cover {
+  background-image: url("Gutenberg-museum-tresorraum-bibeln.e331d975.jpg");
+}
+
+.museum-site .img-cover:before {
+  background-color: #0000004d;
 }
 
 footer {
