@@ -86,6 +86,7 @@
         @include mobile-breakpoint {
             text-align: center;
             margin: 0 auto;
+            font-size: calc(3.8rem + 9.5vw);
         }
     }
     .glide {
