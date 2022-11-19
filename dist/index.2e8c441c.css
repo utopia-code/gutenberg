@@ -81,12 +81,6 @@ nav {
   padding-right: 0;
 }
 
-@media screen and (max-width: 600px) {
-  .nav ul li a {
-    font-size: 1rem;
-  }
-}
-
 .nav .nav-open {
   z-index: 1;
   padding: 50px 1.25rem 1rem;
@@ -133,9 +127,15 @@ nav {
   transform: translateY(0);
 }
 
+@media screen and (max-width: 991px) {
+  .nav .nav ul li {
+    padding-right: 1.3rem;
+  }
+}
+
 .header-collapsed {
   z-index: 999;
-  padding-top: 105px;
+  padding-top: 104px;
   transition: padding-top .5s cubic-bezier(.25, .46, .45, .94);
 }
 

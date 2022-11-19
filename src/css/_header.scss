@@ -35,11 +35,6 @@ $padding_top_nav: 50px;
             &:last-child {
                 padding-right: 0;
             }
-            @media screen and (max-width: 600px) {
-                a {
-                    font-size: 1rem;
-                }
-            }
         }
     }
     .nav-open {
@@ -83,12 +78,24 @@ $padding_top_nav: 50px;
             }
         }
     }
+    @media screen and (max-width: 991px) {
+        .nav {
+            ul {
+                li {
+                    padding-right: 1.3rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 767.89px) {
+        
+    }
 }
 
 .header-collapsed {
     z-index: 999;
     transition: padding-top .5s cubic-bezier(.25,.46,.45,.94);
-    padding-top: 105px;
+    padding-top: 104px;
     &.top-to-header {
         transition:  padding-top .4s cubic-bezier(.25,.46,.45,.94);
         padding-top: $top_distance_nav;
