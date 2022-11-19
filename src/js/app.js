@@ -35,3 +35,11 @@
 
 // infinity carousel
 // https://codepen.io/hmdshfq/pen/JjrZNgP
+
+
+
+// Initialization glide package using ES Modules
+
+import Glide from '@glidejs/glide'
+
+new Glide('.glide').mount();

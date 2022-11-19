@@ -1,7 +1,17 @@
 /* Laura López Doval */
 
+// glide slider / carousel package
+
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+@import 'config.scss';
+@import 'global.scss';
 @import 'fonts.scss';
 @import 'header.scss';
-@import 'global.scss';
+@import 'structure.scss';
 @import 'content.scss';
 @import 'footer.scss';

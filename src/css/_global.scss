@@ -32,6 +32,14 @@ a {
     text-align: center;
 }
 
+.mt-0 {
+    margin-top: 0;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
 figure {
     margin: 0;
 }
@@ -48,7 +56,7 @@ img {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: #fff;
     -webkit-text-stroke-width: 4px;
-    @media screen and (max-width: 767.89px) {
+    @include mobile-breakpoint {
         -webkit-text-stroke-width: 2.5px;
     }
 }
