@@ -535,9 +535,15 @@ function hmrAcceptRun(bundle, id) {
 /* Laura López Doval */ // add active class navigation based on url -> https://stackoverflow.com/questions/20060467/add-active-navigation-class-based-on-url
 (function() {
     var current = location.pathname.split("/")[1];
-    if (current === "") return;
     var menuItems = document.querySelectorAll(".menu-item a");
-    for(var i = 0, l = menuItems.length; i < l; i++)if (menuItems[i].getAttribute("href").indexOf(current) !== -1) menuItems[i].classList.add("is-active");
+    if (current === "") {
+        menuItems[0].classList.add("is-active");
+        return;
+    }
+    for(var i = 0, l = menuItems.length; i < l; i++)if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
+        menuItems[i].classList.add("is-active");
+        console.log(menuItems[0].getAttribute("href"));
+    }
 })();
 // burger menu
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js 

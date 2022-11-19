@@ -4,11 +4,15 @@
 
 (function () {
     var current = location.pathname.split('/')[1];
-    if (current === "") return;
     var menuItems = document.querySelectorAll('.menu-item a');
+    if (current === "") {
+        menuItems[0].classList.add('is-active')
+        return;
+    }
     for (var i = 0, l = menuItems.length; i < l; i++) {
         if (menuItems[i].getAttribute('href').indexOf(current) !== -1) {
             menuItems[i].classList.add('is-active');
+            console.log(menuItems[0].getAttribute('href'));
         }
     }
 })();

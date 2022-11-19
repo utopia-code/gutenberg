@@ -44,7 +44,7 @@ $padding_top_nav: 50px;
     }
     .nav-open {
         position: relative;
-        padding: $padding_top_nav 1.25rem 1rem 1.25rem;
+        padding: $padding_top_nav 1.25rem 1rem;
         z-index: 1;
         transition: transform .5s cubic-bezier(.25,.46,.45,.94);
         transform: translateY(0);
