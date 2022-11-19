@@ -98,10 +98,11 @@ $padding_top_nav: 50px;
             }
         }
         ul {
+            padding-top: $padding_top_nav;
             flex-direction: column;
             li {
-                padding-top: 1.25rem;
-                padding-bottom: 1.25rem;
+                padding-top: .725rem;
+                padding-bottom: .625rem;
             }
         }
         &.collapsed {
