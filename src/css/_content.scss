@@ -224,7 +224,7 @@
     .col-masonry {
         margin-bottom: 80px;
         &:last-child {
-            margin-bottom: none;
+            margin-bottom: 0;
         }
         @include mobile-breakpoint {
             margin-bottom: 50px;

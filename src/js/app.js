@@ -9,6 +9,10 @@
         menuItems[0].classList.add('is-active')
         return;
     }
+    if (current === "museum.html") {
+        menuItems[1].classList.add('is-active')
+        return;
+    }
     for (var i = 0, l = menuItems.length; i < l; i++) {
         if (menuItems[i].getAttribute('href').indexOf(current) !== -1) {
             menuItems[i].classList.add('is-active');
@@ -42,13 +46,10 @@
 
 import Glide from '@glidejs/glide'
 
-new Glide('.glide').mount();
-
-
-var glide = new Glide('.glide', {
+new Glide('.glide', {
     type: 'carousel',
     gap: 0,
-    autoplay: 3000
+    autoplay: 4000
 }).mount();
 
 

@@ -546,6 +546,10 @@ var _glideDefault = parcelHelpers.interopDefault(_glide);
         menuItems[0].classList.add("is-active");
         return;
     }
+    if (current === "museum.html") {
+        menuItems[1].classList.add("is-active");
+        return;
+    }
     for(var i = 0, l = menuItems.length; i < l; i++)if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
         menuItems[i].classList.add("is-active");
         console.log(menuItems[0].getAttribute("href"));
@@ -563,11 +567,10 @@ var _glideDefault = parcelHelpers.interopDefault(_glide);
         content.classList.toggle("top-to-header");
     });
 })();
-new (0, _glideDefault.default)(".glide").mount();
-var glide = new (0, _glideDefault.default)(".glide", {
+new (0, _glideDefault.default)(".glide", {
     type: "carousel",
     gap: 0,
-    autoplay: 3000
+    autoplay: 4000
 }).mount();
 
 },{"@glidejs/glide":"cS4lK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cS4lK":[function(require,module,exports) {
