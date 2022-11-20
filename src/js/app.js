@@ -43,3 +43,12 @@
 import Glide from '@glidejs/glide'
 
 new Glide('.glide').mount();
+
+
+var glide = new Glide('.glide', {
+    type: 'carousel',
+    gap: 0,
+    autoplay: 3000
+}).mount();
+
+

@@ -564,6 +564,11 @@ var _glideDefault = parcelHelpers.interopDefault(_glide);
     });
 })();
 new (0, _glideDefault.default)(".glide").mount();
+var glide = new (0, _glideDefault.default)(".glide", {
+    type: "carousel",
+    gap: 0,
+    autoplay: 3000
+}).mount();
 
 },{"@glidejs/glide":"cS4lK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cS4lK":[function(require,module,exports) {
 /*!

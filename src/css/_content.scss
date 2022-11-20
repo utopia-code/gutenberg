@@ -215,4 +215,22 @@
             background-color: rgba(0,0,0,.3);
         }
     }
+    .glide__slide {
+        img {
+            height: 330px;
+            object-fit: cover;
+        }
+    }
+    .col-masonry {
+        margin-bottom: 80px;
+        &:last-child {
+            margin-bottom: none;
+        }
+        @include mobile-breakpoint {
+            margin-bottom: 50px;
+        }
+        .bg-color-image {
+            background-color: #e6e8ea;
+        }
+    }
 }

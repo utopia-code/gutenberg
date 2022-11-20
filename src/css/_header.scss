@@ -53,7 +53,6 @@ $padding_top_nav: 50px;
         background-color: black;
         width: 100%;
         padding: .5rem 0 0rem 1.25rem;
-        z-index: 0;
         .nav-collapsed-inner {
             position: relative;
             overflow: hidden;
@@ -63,7 +62,6 @@ $padding_top_nav: 50px;
             top: -3px;
             transition: transform .4s cubic-bezier(.25,.46,.45,.94);
             transform: translateY(100%);
-            z-index: 0;
         }
     }
     &.collapsed {
@@ -91,6 +89,7 @@ $padding_top_nav: 50px;
         transform: translateY(-100%);
         .nav-open {
             height: 100vh;
+            z-index: 0;
         }
         .nav-collapsed {
             .logo {

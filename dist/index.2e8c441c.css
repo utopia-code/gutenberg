@@ -193,6 +193,14 @@ a:hover:after {
   margin-bottom: 0;
 }
 
+.mb-5 {
+  margin-bottom: 50px;
+}
+
+.c-inherit {
+  color: inherit;
+}
+
 figure {
   margin: 0;
 }
@@ -386,7 +394,6 @@ nav {
 
 .nav .nav-collapsed {
   width: 100%;
-  z-index: 0;
   background-color: #000;
   padding: .5rem 0 0 1.25rem;
   position: absolute;
@@ -400,7 +407,6 @@ nav {
 }
 
 .nav .nav-collapsed .logo {
-  z-index: 0;
   transition: transform .4s cubic-bezier(.25, .46, .45, .94);
   position: relative;
   top: -3px;
@@ -435,6 +441,7 @@ nav {
 
   .nav .nav-open {
     height: 100vh;
+    z-index: 0;
   }
 
   .nav .nav-collapsed .logo {
@@ -571,6 +578,14 @@ section {
   .col-md-6.uneven, .cd-md-4.uneven, .col-md-6.col-last, .cd-md-4.col-last {
     margin-top: 50px;
   }
+}
+
+.col-md-6 {
+  margin-bottom: 50px;
+}
+
+.col-md-6:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 767.89px) {
@@ -827,6 +842,29 @@ section {
 
 .museum-site .img-cover:before {
   background-color: #0000004d;
+}
+
+.museum-site .glide__slide img {
+  height: 330px;
+  object-fit: cover;
+}
+
+.museum-site .col-masonry {
+  margin-bottom: 80px;
+}
+
+.museum-site .col-masonry:last-child {
+  margin-bottom: none;
+}
+
+@media screen and (max-width: 767.89px) {
+  .museum-site .col-masonry {
+    margin-bottom: 50px;
+  }
+}
+
+.museum-site .col-masonry .bg-color-image {
+  background-color: #e6e8ea;
 }
 
 footer {

@@ -56,6 +56,10 @@ section {
 }
 
 .col-md-6 {
+    margin-bottom: 50px;
+    &:last-child {
+        margin-bottom: 0;
+    }
     @media screen and (min-width: 767.89px) {
         width: calc(50% - 40px);
     }
