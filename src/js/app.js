@@ -1,5 +1,22 @@
 /* Laura López Doval */
 
+// sticky sidebar
+
+import './resize-sensor.js';
+import './sticky-sidebar.js';
+
+(function () {
+    var sidebar = document.querySelectorAll('.sidebar');
+    sidebar.forEach(function(s) {
+        new StickySidebar(s, {
+            topSpacing: 100,
+            bottomSpacing: 20,
+            containerSelector: '.main-content',
+            innerWrapperSelector: '.sidebar__inner'
+        });
+    })
+})();
+
 // add active class navigation based on url -> https://stackoverflow.com/questions/20060467/add-active-navigation-class-based-on-url
 
 (function () {
@@ -16,7 +33,6 @@
     for (var i = 0, l = menuItems.length; i < l; i++) {
         if (menuItems[i].getAttribute('href').indexOf(current) !== -1) {
             menuItems[i].classList.add('is-active');
-            console.log(menuItems[0].getAttribute('href'));
         }
     }
 })();
@@ -37,19 +53,23 @@
     })
 })();
 
+
 // infinity carousel
 // https://codepen.io/hmdshfq/pen/JjrZNgP
 
 
-
 // Initialization glide package using ES Modules
 
-import Glide from '@glidejs/glide'
+import Glide from '@glidejs/glide';
 
-new Glide('.glide', {
-    type: 'carousel',
-    gap: 0,
-    autoplay: 4000
-}).mount();
+const getSlide = Array.from(document.querySelectorAll(".glide"));
 
+getSlide.forEach((item, index) => {
+    const slider = new Glide(item, {
+        type: "carousel",
+        gap: 0,
+        autoplay: "3000"
+    });
 
+    slider.mount();
+})

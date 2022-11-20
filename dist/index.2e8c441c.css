@@ -620,6 +620,27 @@ section {
   }
 }
 
+.col-lg-5, .col-lg-7 {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+@media screen and (min-width: 991px) {
+  .col-lg-5, .col-lg-7 {
+    flex: none;
+  }
+
+  .col-lg-5 {
+    width: calc(41.666% - 40px);
+    margin-bottom: 0;
+  }
+
+  .col-lg-7 {
+    width: calc(58.333% - 40px);
+    margin-bottom: 0;
+  }
+}
+
 .img-cover {
   background-image: url("bg-typography.2bda6c51.jpeg");
   background-position: center;
@@ -845,6 +866,25 @@ section {
 .bio-site .img-cover {
   background-image: url("Mainz-Gutenbergdenkmal-Relief.1e06e88e.jpg");
   background-position: top;
+}
+
+.bio-site .main-content .sidebar h2 {
+  width: calc(100% - 40px);
+}
+
+.bio-site .main-content .sidebar .sidebar__inner {
+  left: auto !important;
+}
+
+@media screen and (max-width: 991px) {
+  .bio-site .main-content .sidebar h2 {
+    width: 100%;
+  }
+
+  .bio-site .main-content .sidebar .sidebar__inner {
+    position: static !important;
+    transform: translate(0) !important;
+  }
 }
 
 .museum-site .img-cover {

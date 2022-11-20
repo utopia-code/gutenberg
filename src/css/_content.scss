@@ -206,6 +206,55 @@
         background-position: top center;
         background-image: url('../images/Mainz-Gutenbergdenkmal-Relief.jpg');
     }
+    .main-content {
+        .sidebar {
+            h2 { 
+                width: calc(100% - 40px);
+            }
+            .sidebar__inner {
+                left: auto !important;
+            }
+        }
+
+         // cambiar todo a static o anadir media query en js
+        @media screen and (max-width: 991px) {
+            .sidebar {
+                h2 { 
+                    width: calc(100%);
+                }
+                .sidebar__inner {
+                    position: static !important;
+                    transform: translate(0) !important;
+                }
+            }
+            // .sidebar {
+            //     transform: rotate(270deg);
+            //     max-width: 350px;
+            //     padding: 0px;
+            //     transform-origin: left top;
+            //     h2 { 
+            //         width: calc(100% - 20px);
+            //         font-size: 1.2rem;
+            //     }
+            //     &.is-affixed {
+            //         left: -350px !important;
+            //         width: 350px !important;
+            //         top: 0 !important;
+            //     }
+            //     .sidebar__inner {
+            //         max-width: 400px;
+            //         left: -350px !important;
+            //         width: 350px !important;
+            //         top: 0 !important;
+            //     }
+            // }
+            // .content {
+            //     max-width: calc(100% - 70px);
+            //     padding-left: 90px;
+            //     margin-top: -70px;
+            // }
+        }
+    }
 }
 
 .museum-site {
