@@ -854,9 +854,7 @@ section {
 }
 
 .typography-site .bg-image-box.museum {
-  background-color: #000;
-  background-image: url("DBP-1961-349-Johannes-Gutenberg.d3487b3d.jpg");
-  background-size: contain;
+  background-image: url("Bundesarchiv-Bild-183-R67584-Duesseldorf-PresseausstellungGutenbergpresse.6d8d4687.jpg");
 }
 
 .typography-site .bg-image-box.tour {
@@ -952,6 +950,21 @@ section {
 .bibliography-site .links-sites .h6 {
   font-weight: 600;
   display: block;
+}
+
+.bibliography-site .links-images li {
+  align-items: center;
+  display: flex;
+}
+
+.bibliography-site .links-images li .thumb {
+  flex: 0 0 110px;
+  margin-right: 15px;
+}
+
+.bibliography-site .links-images li p {
+  max-width: calc(100% - 125px);
+  flex: none;
 }
 
 footer {

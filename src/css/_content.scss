@@ -182,9 +182,8 @@
             background-image: url('../images/movable-types-www-gutenber.jpg');
         }
         &.museum {
-            background-size: contain;
-            background-color: black;
-            background-image: url('../images/DBP-1961-349-Johannes-Gutenberg.jpg');
+
+            background-image: url('../images/Bundesarchiv-Bild-183-R67584-Duesseldorf-PresseausstellungGutenbergpresse.jpg');
         }
         &.tour {
             background-image: url('../images/tour-Mainz-monument-Gutenberg.jpg');
@@ -276,6 +275,20 @@
         .h6 {
             display: block;
             font-weight: 600;
+        }
+    }
+    .links-images {
+        li {
+            display: flex;
+            align-items: center;
+            .thumb {
+                flex: 0 0 110px;
+                margin-right: 15px;
+            }
+            p {
+                flex: 0 0 auto;
+                max-width: calc(100% - 125px);
+            }
         }
     }
 }
