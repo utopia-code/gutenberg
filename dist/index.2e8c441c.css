@@ -181,6 +181,17 @@ a:hover:after {
   width: calc(100% + 2px);
 }
 
+@media screen and (max-width: 767.89px) {
+  a {
+    white-space: pre-wrap;
+    text-decoration: underline;
+  }
+
+  a:after {
+    display: none;
+  }
+}
+
 .center {
   text-align: center;
 }
