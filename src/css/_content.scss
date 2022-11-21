@@ -5,12 +5,6 @@
         width: 100%;
         padding-top: 500px;
         background-color: rgba(0,0,0,.2);
-        // @media screen and (max-width: 1400px) {
-        // }
-        // @media screen and (max-width: 991px) {
-        // }
-        // @include mobile-breakpoint {
-        // }
     }
     background-image: url('../images/bg-typography.jpeg');
     background-size: cover;
@@ -38,8 +32,6 @@
         font-size: calc(1.2rem + 1.8vw);
         margin-top: 2rem;
     }
-    // @include mobile-breakpoint {
-    // }
 }
 
 .home{
@@ -206,54 +198,15 @@
         background-position: top center;
         background-image: url('../images/Mainz-Gutenbergdenkmal-Relief.jpg');
     }
-    .main-content {
-        .sidebar {
-            h2 { 
-                width: calc(100% - 40px);
-            }
-            .sidebar__inner {
-                left: auto !important;
-            }
+    .sidebar {
+        .sidebar__inner {
+            left: auto !important;
         }
-
-         // cambiar todo a static o anadir media query en js
-        @media screen and (max-width: 991px) {
-            .sidebar {
-                h2 { 
-                    width: calc(100%);
-                }
-                .sidebar__inner {
-                    position: static !important;
-                    transform: translate(0) !important;
-                }
-            }
-            // .sidebar {
-            //     transform: rotate(270deg);
-            //     max-width: 350px;
-            //     padding: 0px;
-            //     transform-origin: left top;
-            //     h2 { 
-            //         width: calc(100% - 20px);
-            //         font-size: 1.2rem;
-            //     }
-            //     &.is-affixed {
-            //         left: -350px !important;
-            //         width: 350px !important;
-            //         top: 0 !important;
-            //     }
-            //     .sidebar__inner {
-            //         max-width: 400px;
-            //         left: -350px !important;
-            //         width: 350px !important;
-            //         top: 0 !important;
-            //     }
-            // }
-            // .content {
-            //     max-width: calc(100% - 70px);
-            //     padding-left: 90px;
-            //     margin-top: -70px;
-            // }
-        }
+    }
+    .content img {
+        display: block;
+        margin: 0 auto 0;
+        padding-top: 2rem;
     }
 }
 
@@ -280,6 +233,29 @@
         }
         .bg-color-image {
             background-color: #e6e8ea;
+        }
+    }
+}
+
+.bibliography-site {
+    .video-youtube {
+        position: relative;
+        width: 100%;
+        &::before {
+            content:"";
+            padding-top: calc(( 9 / 16) * 100%);
+            display: block;
+            width: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            object-fit: cover;
         }
     }
 }

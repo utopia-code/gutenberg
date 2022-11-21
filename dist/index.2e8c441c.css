@@ -559,8 +559,7 @@ section {
 .row {
   width: 100%;
   flex-wrap: wrap;
-  margin-left: -20px;
-  margin-right: -20px;
+  justify-content: space-between;
   display: flex;
 }
 
@@ -568,25 +567,26 @@ section {
   align-items: center;
 }
 
+@media screen and (max-width: 767.89px) {
+  .row.mobile-reverse-order .col-md-6:first-child {
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  .row.mobile-reverse-order .col-md-6:last-child {
+    order: 1;
+    margin-bottom: 50px;
+  }
+}
+
 .col-md-6, .cd-md-4 {
   width: 100%;
   flex: 0 0 100%;
-  padding: 0 20px;
 }
 
 @media screen and (min-width: 767.89px) {
   .col-md-6, .cd-md-4 {
     flex: none;
-  }
-}
-
-.col-md-6.uneven, .cd-md-4.uneven {
-  margin-top: 120px;
-}
-
-@media screen and (max-width: 767.89px) {
-  .col-md-6.uneven, .cd-md-4.uneven, .col-md-6.col-last, .cd-md-4.col-last {
-    margin-top: 50px;
   }
 }
 
@@ -600,7 +600,7 @@ section {
 
 @media screen and (min-width: 767.89px) {
   .col-md-6 {
-    width: calc(50% - 40px);
+    width: calc(50% - 20px);
     margin-bottom: 0;
   }
 }
@@ -615,7 +615,7 @@ section {
 
 @media screen and (min-width: 991px) {
   .cd-md-4 {
-    width: calc(33.333% - 40px);
+    width: calc(33.333% - 20px);
     margin-bottom: 0;
   }
 }
@@ -631,12 +631,12 @@ section {
   }
 
   .col-lg-5 {
-    width: calc(41.666% - 40px);
+    width: calc(41.666% - 20px);
     margin-bottom: 0;
   }
 
   .col-lg-7 {
-    width: calc(58.333% - 40px);
+    width: calc(58.333% - 20px);
     margin-bottom: 0;
   }
 }
@@ -868,23 +868,14 @@ section {
   background-position: top;
 }
 
-.bio-site .main-content .sidebar h2 {
-  width: calc(100% - 40px);
-}
-
-.bio-site .main-content .sidebar .sidebar__inner {
+.bio-site .sidebar .sidebar__inner {
   left: auto !important;
 }
 
-@media screen and (max-width: 991px) {
-  .bio-site .main-content .sidebar h2 {
-    width: 100%;
-  }
-
-  .bio-site .main-content .sidebar .sidebar__inner {
-    position: static !important;
-    transform: translate(0) !important;
-  }
+.bio-site .content img {
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: block;
 }
 
 .museum-site .img-cover {
@@ -916,6 +907,26 @@ section {
 
 .museum-site .col-masonry .bg-color-image {
   background-color: #e6e8ea;
+}
+
+.bibliography-site .video-youtube {
+  width: 100%;
+  position: relative;
+}
+
+.bibliography-site .video-youtube:before {
+  content: "";
+  width: 100%;
+  padding-top: 56.25%;
+  display: block;
+}
+
+.bibliography-site .video-youtube iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
 }
 
 footer {
