@@ -3,44 +3,29 @@
 // sticky sidebar
 // https://webdevetc.com/blog/matchmedia-events-for-window-resizes/
 
-import './resize-sensor.js';
-import './sticky-sidebar.js';
+// http://marcj.github.io/css-element-queries/ -> package resize sensor
+// https://www.npmjs.com/package/sticky-sidebar -> package sticky sidebar
 
-(function () {
-    // const mediaQuery = window.matchMedia('(min-width: 992px)');
-    // function handleDesktopChange(e) {
-    //     if (e.matches) {
-    //         var sidebar = document.querySelectorAll('.sidebar');
-    //         sidebar.forEach(function(s) {
-    //             new StickySidebar(s, {
-    //                 topSpacing: 100,
-    //                 bottomSpacing: 20,
-    //                 containerSelector: '.main-content',
-    //                 innerWrapperSelector: '.sidebar__inner'
-    //             });
-    //         })
-    //     }
-    // }
-    // mediaQuery.addListener(handleDesktopChange);
-    // handleDesktopChange(mediaQuery);
+import ResizeSensor from 'css-element-queries/src/ResizeSensor.js';
+import StickySidebar from 'sticky-sidebar/src/sticky-sidebar.js';
+import Glide from '@glidejs/glide';
 
-    const mediaQuery = '(max-width: 700px)';
-    const mediaQueryList = window.matchMedia(mediaQuery);
+var sidebar = document.querySelectorAll('.sidebar');
+var element = document.querySelector('body');
 
-    window.addEventListener('resize', event => {
-        if (window.innerWidth >= 992) {
-            var sidebar = document.querySelectorAll('.sidebar');
-            sidebar.forEach(function(s) {
-                new StickySidebar(s, {
-                    topSpacing: 100,
-                    bottomSpacing: 20,
-                    containerSelector: '.main-content',
-                    innerWrapperSelector: '.sidebar__inner'
-                });
-            })
-        }
-    })
-})();
+new ResizeSensor(element, function() {
+    if (element.clientWidth >= 992) {
+        sidebar.forEach(function(s) {
+            new StickySidebar(s, {
+                topSpacing: 104,
+                bottomSpacing: 20,
+                containerSelector: '.main-content',
+                innerWrapperSelector: '.sidebar__inner'
+            });
+        })
+    } 
+});
+
 
 // add active class navigation based on url -> https://stackoverflow.com/questions/20060467/add-active-navigation-class-based-on-url
 
@@ -70,11 +55,17 @@ import './sticky-sidebar.js';
     let burger_menu = document.querySelector('.burger-menu');
     let nav = document.querySelector('.nav');
     let content = document.querySelector('.header-collapsed');
+    var sidebar = document.querySelectorAll('.sidebar');
 
     burger_menu.addEventListener('click', function() {
         burger_menu.classList.toggle('change');
         nav.classList.toggle('collapsed');
         content.classList.toggle('top-to-header');
+        sidebar.forEach(function(s) {
+            if (s) {
+                s.classList.toggle('top-collapsed');
+            }
+        })
     })
 })();
 
@@ -84,8 +75,6 @@ import './sticky-sidebar.js';
 
 
 // Initialization glide package using ES Modules
-
-import Glide from '@glidejs/glide';
 
 const getSlide = Array.from(document.querySelectorAll(".glide"));
 

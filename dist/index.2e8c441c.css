@@ -877,13 +877,16 @@ section {
   background-position: top;
 }
 
+.bio-site .main-content img {
+  display: block;
+}
+
 .bio-site .sidebar .sidebar__inner {
   left: auto !important;
 }
 
 .bio-site .content img {
   margin: 0 auto;
-  padding-top: 2rem;
   display: block;
 }
 
