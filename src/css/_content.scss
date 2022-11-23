@@ -273,6 +273,9 @@
         }
         @include mobile-breakpoint {
             margin-bottom: 50px;
+            a {
+                border-bottom: 1px solid #000;
+            }
         }
     }
     .links-sites {

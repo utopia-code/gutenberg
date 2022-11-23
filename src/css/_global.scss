@@ -98,6 +98,9 @@ img {
         &::after {
             background-color: #fff;
         }
+        @include mobile-breakpoint {
+            border-bottom: 1px solid white;
+        }
     }
 
 }
