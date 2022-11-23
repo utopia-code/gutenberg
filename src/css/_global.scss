@@ -30,7 +30,7 @@ a {
         &::after {
             display: none;
         }
-        white-space: pre-wrap;
+        word-break: break-all;
         text-decoration: underline;
     }
 }

@@ -62,6 +62,9 @@ $padding_top_nav: 50px;
             top: -3px;
             transition: transform .4s cubic-bezier(.25,.46,.45,.94);
             transform: translateY(100%);
+            >a {
+                text-decoration: none;
+            }
         }
     }
     &.collapsed {

@@ -183,7 +183,7 @@ a:hover:after {
 
 @media screen and (max-width: 767.89px) {
   a {
-    white-space: pre-wrap;
+    word-break: break-all;
     text-decoration: underline;
   }
 
@@ -432,6 +432,10 @@ nav {
   position: relative;
   top: -3px;
   transform: translateY(100%);
+}
+
+.nav .nav-collapsed .logo > a {
+  text-decoration: none;
 }
 
 .nav.collapsed {
