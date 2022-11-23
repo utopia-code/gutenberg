@@ -543,9 +543,26 @@ var _stickySidebarJs = require("./sticky-sidebar.js");
 var _glide = require("@glidejs/glide");
 var _glideDefault = parcelHelpers.interopDefault(_glide);
 (function() {
-    const mediaQuery = window.matchMedia("(min-width: 992px)");
-    function handleDesktopChange(e) {
-        if (e.matches) {
+    // const mediaQuery = window.matchMedia('(min-width: 992px)');
+    // function handleDesktopChange(e) {
+    //     if (e.matches) {
+    //         var sidebar = document.querySelectorAll('.sidebar');
+    //         sidebar.forEach(function(s) {
+    //             new StickySidebar(s, {
+    //                 topSpacing: 100,
+    //                 bottomSpacing: 20,
+    //                 containerSelector: '.main-content',
+    //                 innerWrapperSelector: '.sidebar__inner'
+    //             });
+    //         })
+    //     }
+    // }
+    // mediaQuery.addListener(handleDesktopChange);
+    // handleDesktopChange(mediaQuery);
+    const mediaQuery = "(max-width: 700px)";
+    const mediaQueryList = window.matchMedia(mediaQuery);
+    window.addEventListener("resize", (event)=>{
+        if (window.innerWidth >= 992) {
             var sidebar = document.querySelectorAll(".sidebar");
             sidebar.forEach(function(s) {
                 new StickySidebar(s, {
@@ -556,24 +573,7 @@ var _glideDefault = parcelHelpers.interopDefault(_glide);
                 });
             });
         }
-    }
-    mediaQuery.addListener(handleDesktopChange);
-    handleDesktopChange(mediaQuery);
-// const mediaQuery = '(max-width: 700px)';
-// const mediaQueryList = window.matchMedia(mediaQuery);
-// window.addEventListener('resize', event => {
-//     if (window.innerWidth <= 992) {
-//         var sidebar = document.querySelectorAll('.sidebar');
-//         sidebar.forEach(function(s) {
-//             new StickySidebar(s, {
-//                 topSpacing: 100,
-//                 bottomSpacing: 20,
-//                 containerSelector: '.main-content',
-//                 innerWrapperSelector: '.sidebar__inner'
-//             });
-//         })
-//     }
-// })
+    });
 })();
 // add active class navigation based on url -> https://stackoverflow.com/questions/20060467/add-active-navigation-class-based-on-url
 (function() {
