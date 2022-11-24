@@ -5,7 +5,8 @@
 
 import ResizeSensor from 'css-element-queries/src/ResizeSensor.js';
 import StickySidebar from 'sticky-sidebar/src/sticky-sidebar.js';
-import Glide from '@glidejs/glide';
+
+import Glide, { Autoplay } from '@glidejs/glide/dist/glide.modular.esm';
 
 var sidebar = document.querySelectorAll('.sidebar');
 var element = document.querySelector('body');
@@ -22,6 +23,16 @@ new ResizeSensor(element, function() {
         })
     } 
 });
+
+// Initialization glide package using ES Modules
+// import Glide from '@glidejs/glide';
+// new Glide('.glide').mount()
+
+new Glide('.glide', {
+    type: 'carousel',
+    gap: 0,
+    autoplay: 4000
+}).mount({ Autoplay });
 
 
 // add active class navigation based on url -> https://stackoverflow.com/questions/20060467/add-active-navigation-class-based-on-url
@@ -64,18 +75,3 @@ new ResizeSensor(element, function() {
 
 // infinity carousel
 // https://codepen.io/hmdshfq/pen/JjrZNgP
-
-
-// Initialization glide package using ES Modules
-
-const getSlide = Array.from(document.querySelectorAll(".glide"));
-
-getSlide.forEach((item) => {
-    const slider = new Glide(item, {
-        type: "carousel",
-        gap: 0,
-        autoplay: "3000"
-    });
-
-    slider.mount();
-})
