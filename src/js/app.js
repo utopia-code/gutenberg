@@ -1,8 +1,5 @@
 /* Laura López Doval */
 
-// sticky sidebar
-// https://webdevetc.com/blog/matchmedia-events-for-window-resizes/
-
 // http://marcj.github.io/css-element-queries/ -> package resize sensor
 // https://www.npmjs.com/package/sticky-sidebar -> package sticky sidebar
 
@@ -18,7 +15,7 @@ new ResizeSensor(element, function() {
         sidebar.forEach(function(s) {
             new StickySidebar(s, {
                 topSpacing: 104,
-                bottomSpacing: 20,
+                bottomSpacing: 104,
                 containerSelector: '.main-content',
                 innerWrapperSelector: '.sidebar__inner'
             });
@@ -32,6 +29,7 @@ new ResizeSensor(element, function() {
 (function () {
     var current = location.pathname.split('/')[1];
     var menuItems = document.querySelectorAll('.menu-item a');
+    
     if (current === "") {
         menuItems[0].classList.add('is-active')
         return;
@@ -55,17 +53,11 @@ new ResizeSensor(element, function() {
     let burger_menu = document.querySelector('.burger-menu');
     let nav = document.querySelector('.nav');
     let content = document.querySelector('.header-collapsed');
-    var sidebar = document.querySelectorAll('.sidebar');
 
     burger_menu.addEventListener('click', function() {
         burger_menu.classList.toggle('change');
         nav.classList.toggle('collapsed');
         content.classList.toggle('top-to-header');
-        sidebar.forEach(function(s) {
-            if (s) {
-                s.classList.toggle('top-collapsed');
-            }
-        })
     })
 })();
 
@@ -78,7 +70,7 @@ new ResizeSensor(element, function() {
 
 const getSlide = Array.from(document.querySelectorAll(".glide"));
 
-getSlide.forEach((item, index) => {
+getSlide.forEach((item) => {
     const slider = new Glide(item, {
         type: "carousel",
         gap: 0,
