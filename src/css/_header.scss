@@ -3,6 +3,7 @@ $padding_top_nav: 50px;
 
 .nav {
     position: fixed;
+    position: absolute;
     top: $top_distance_nav;
     background-color: black;
     width: 100%;
