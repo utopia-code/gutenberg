@@ -201,8 +201,8 @@
         .sidebar__inner {
             left: auto !important;
         }
-        &.is-affixed {
-            transform: translateY(0) !important;
+        h2 {
+            margin: 0;
         }
     }
     .content img {

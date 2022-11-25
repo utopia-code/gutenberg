@@ -1,9 +1,48 @@
 /* Laura López Doval */
 
+// settings package sticky sidebar
 
 import ResizeSensor from 'css-element-queries/src/ResizeSensor.js';
 import StickySidebar from 'sticky-sidebar/src/sticky-sidebar.js';
+
+document.addEventListener('DOMContentLoaded', function () {
+    const bodyHasClassBio = document.body.classList.contains('bio-site');
+
+    if ( bodyHasClassBio ) {
+    
+        let sidebar = document.querySelectorAll('.sidebar');
+        let element = document.querySelector('body');
+    
+        new ResizeSensor(element, function() {
+            if (element.clientWidth >= 992) {
+                sidebar.forEach(function(s) {
+                    new StickySidebar(s, {
+                        topSpacing: 125,
+                        bottomSpacing: 20,
+                        containerSelector: '.main-content',
+                        innerWrapperSelector: '.sidebar__inner'
+                    });
+                })
+            } 
+        });
+    }
+  }, false);
+
+
+// initialization slider
+
 import Glide from '@glidejs/glide';
+
+const bodyHasClassHome = document.body.classList.contains('home');
+const bodyHasClassMuseum = document.body.classList.contains('museum-site');
+
+if ( bodyHasClassHome || bodyHasClassMuseum )  {
+    new Glide('.glide', {
+        type: 'slider',
+        startAt: 0,
+        autoplay: 4000
+    }).mount()
+}
 
 (function () {
 
@@ -42,50 +81,4 @@ import Glide from '@glidejs/glide';
     })
 
 })();
-
-// initialization slider
-
-const bodyHasClassHome = document.body.classList.contains('home');
-const bodyHasClassMuseum = document.body.classList.contains('museum-site');
-
-if ( bodyHasClassHome || bodyHasClassMuseum )  {
-    new Glide('.glide', {
-        type: 'slider',
-        startAt: 0,
-        autoplay: 4000
-    }).mount()
-}
-
-// settings package sticky sidebar
-
-document.addEventListener('DOMContentLoaded', function () {
-    const bodyHasClassBio = document.body.classList.contains('bio-site');
-
-    if ( bodyHasClassBio ) {
-    
-        let sidebar = document.querySelectorAll('.sidebar');
-        let element = document.querySelector('body');
-    
-        new ResizeSensor(element, function() {
-            if (element.clientWidth >= 992) {
-                sidebar.forEach(function(s) {
-                    new StickySidebar(s, {
-                        topSpacing: 104,
-                        bottomSpacing: 20,
-                        containerSelector: '.main-content',
-                        innerWrapperSelector: '.sidebar__inner'
-                    });
-                })
-                // var sidebar = new StickySidebar('.sidebar', {
-                //         topSpacing: 104,
-                //         bottomSpacing: 0,
-                //         containerSelector: '.main-content',
-                //         innerWrapperSelector: '.sidebar__inner'
-                //     });
-            } 
-        });
-    }
-  }, false);
-  
-
 
