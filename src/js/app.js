@@ -5,27 +5,43 @@
 import ResizeSensor from 'css-element-queries/src/ResizeSensor.js';
 import StickySidebar from 'sticky-sidebar/src/sticky-sidebar.js';
 
-document.addEventListener('DOMContentLoaded', function () {
-    const bodyHasClassBio = document.body.classList.contains('bio-site');
-    if ( bodyHasClassBio ) {
-        
-        let element = document.body;
-        new ResizeSensor(element, function() {
-            if (element.clientWidth >= 992) {
+let element = document.body;
+new ResizeSensor(element, function() {
+    if (element.clientWidth >= 992) {
 
-                let sidebar = document.querySelectorAll('.sidebar');
-                sidebar.forEach(function(s) {
-                    new StickySidebar(s, {
-                        topSpacing: 125,
-                        bottomSpacing: 20,
-                        containerSelector: '.main-content',
-                        innerWrapperSelector: '.sidebar__inner'
-                    });
-                })
-            } 
-        });
-    }
-})
+        let sidebar = document.querySelectorAll('.sidebar');
+        sidebar.forEach(function(s) {
+            new StickySidebar(s, {
+                topSpacing: 125,
+                bottomSpacing: 20,
+                containerSelector: '.main-content',
+                innerWrapperSelector: '.sidebar__inner'
+            });
+        })
+    } 
+});
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     const bodyHasClassBio = document.body.classList.contains('bio-site');
+//     if ( bodyHasClassBio ) {
+        
+//         let element = document.body;
+//         new ResizeSensor(element, function() {
+//             if (element.clientWidth >= 992) {
+
+//                 let sidebar = document.querySelectorAll('.sidebar');
+//                 sidebar.forEach(function(s) {
+//                     new StickySidebar(s, {
+//                         topSpacing: 125,
+//                         bottomSpacing: 20,
+//                         containerSelector: '.main-content',
+//                         innerWrapperSelector: '.sidebar__inner'
+//                     });
+//                 })
+//             } 
+//         });
+//     }
+// })
 
 // initialization slider
 
