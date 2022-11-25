@@ -590,7 +590,7 @@ if (bodyHasClassBio) {
     });
 }
 
-},{"css-element-queries/src/ResizeSensor.js":"iWV5z","sticky-sidebar/src/sticky-sidebar.js":"cBIhP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@glidejs/glide":"cS4lK"}],"iWV5z":[function(require,module,exports) {
+},{"css-element-queries/src/ResizeSensor.js":"iWV5z","sticky-sidebar/src/sticky-sidebar.js":"cBIhP","@glidejs/glide":"cS4lK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iWV5z":[function(require,module,exports) {
 "use strict";
 /**
  * Copyright Marc J. Schmidt. See the LICENSE file at the top-level
