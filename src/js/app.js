@@ -4,7 +4,6 @@
 import ResizeSensor from 'css-element-queries/src/ResizeSensor.js';
 import StickySidebar from 'sticky-sidebar/src/sticky-sidebar.js';
 import Glide from '@glidejs/glide';
-// import Glide, { Autoplay } from '@glidejs/glide/dist/glide.modular.esm';
 
 (function () {
 
@@ -44,19 +43,6 @@ import Glide from '@glidejs/glide';
 
 })();
 
-// initialization slider
-
-const bodyHasClassHome = document.body.classList.contains('home');
-const bodyHasClassMuseum = document.body.classList.contains('museum-site');
-
-if ( bodyHasClassHome || bodyHasClassMuseum )  {
-    new Glide('.glide', {
-        type: 'slider',
-        startAt: 0,
-        autoplay: 4000
-    }).mount()
-}
-
 // settings package sticky sidebar
 
 const bodyHasClassBio = document.body.classList.contains('bio-site');
@@ -79,3 +65,18 @@ if ( bodyHasClassBio ) {
         } 
     });
 }
+
+// initialization slider
+
+const bodyHasClassHome = document.body.classList.contains('home');
+const bodyHasClassMuseum = document.body.classList.contains('museum-site');
+
+if ( bodyHasClassHome || bodyHasClassMuseum )  {
+    new Glide('.glide', {
+        type: 'slider',
+        startAt: 0,
+        autoplay: 4000
+    }).mount()
+}
+
+
