@@ -43,29 +43,6 @@ import Glide from '@glidejs/glide';
 
 })();
 
-// settings package sticky sidebar
-
-const bodyHasClassBio = document.body.classList.contains('bio-site');
-
-if ( bodyHasClassBio ) {
-
-    let sidebar = document.querySelectorAll('.sidebar');
-    let element = document.querySelector('body');
-
-    new ResizeSensor(element, function() {
-        if (element.clientWidth >= 992) {
-            sidebar.forEach(function(s) {
-                new StickySidebar(s, {
-                    topSpacing: 104,
-                    bottomSpacing: 0,
-                    containerSelector: '.main-content',
-                    innerWrapperSelector: '.sidebar__inner'
-                });
-            })
-        } 
-    });
-}
-
 // initialization slider
 
 const bodyHasClassHome = document.body.classList.contains('home');
@@ -78,5 +55,37 @@ if ( bodyHasClassHome || bodyHasClassMuseum )  {
         autoplay: 4000
     }).mount()
 }
+
+// settings package sticky sidebar
+
+document.addEventListener('DOMContentLoaded', function () {
+    const bodyHasClassBio = document.body.classList.contains('bio-site');
+
+    if ( bodyHasClassBio ) {
+    
+        let sidebar = document.querySelectorAll('.sidebar');
+        let element = document.querySelector('body');
+    
+        new ResizeSensor(element, function() {
+            if (element.clientWidth >= 992) {
+                sidebar.forEach(function(s) {
+                    new StickySidebar(s, {
+                        topSpacing: 104,
+                        bottomSpacing: 0,
+                        containerSelector: '.main-content',
+                        innerWrapperSelector: '.sidebar__inner'
+                    });
+                })
+                // var sidebar = new StickySidebar('.sidebar', {
+                //         topSpacing: 104,
+                //         bottomSpacing: 0,
+                //         containerSelector: '.main-content',
+                //         innerWrapperSelector: '.sidebar__inner'
+                //     });
+            } 
+        });
+    }
+  }, false);
+  
 
 
