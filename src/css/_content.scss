@@ -193,19 +193,16 @@
 }
 
 .bio-site {
-    section {
-        padding-top: 0;
-    }
     .img-cover {
         background-position: top center;
         background-image: url('../images/Mainz-Gutenbergdenkmal-Relief.jpg');
     }
-    .main-content {
-        padding-top: 80px
-    }
     .sidebar {
         .sidebar__inner {
             left: auto !important;
+        }
+        &.is-affixed {
+            transform: translateY(0) !important;
         }
     }
     .content img {
