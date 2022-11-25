@@ -2,9 +2,6 @@
 node_modules
 package-lock.json
 
-# dist
-dist
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
