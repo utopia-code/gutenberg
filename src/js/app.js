@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (element.clientWidth >= 992) {
                 sidebar.forEach(function(s) {
                     new StickySidebar(s, {
-                        topSpacing: 0,
-                        bottomSpacing: 0,
+                        topSpacing: 20,
+                        bottomSpacing: 20,
                         containerSelector: '.main-content',
                         innerWrapperSelector: '.sidebar__inner'
                     });
