@@ -5,8 +5,8 @@
 
 import ResizeSensor from 'css-element-queries/src/ResizeSensor.js';
 import StickySidebar from 'sticky-sidebar/src/sticky-sidebar.js';
-
-import Glide, { Autoplay } from '@glidejs/glide/dist/glide.modular.esm';
+import Glide from '@glidejs/glide';
+// import Glide, { Autoplay } from '@glidejs/glide/dist/glide.modular.esm';
 
 var sidebar = document.querySelectorAll('.sidebar');
 var element = document.querySelector('body');
@@ -26,7 +26,8 @@ new ResizeSensor(element, function() {
 
 // Initialization glide package using ES Modules
 // import Glide from '@glidejs/glide';
-// new Glide('.glide').mount()
+
+// new Glide('.glide').mount({ Autoplay })
 
 let glideSlider = document.querySelector('.glide');
 
@@ -35,7 +36,7 @@ if (glideSlider) {
         type: 'carousel',
         gap: 0,
         autoplay: 4000
-    }).mount({ Autoplay });
+    }).mount();
 }
 
 
