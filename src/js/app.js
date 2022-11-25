@@ -1,48 +1,15 @@
 /* Laura López Doval */
 
-// http://marcj.github.io/css-element-queries/ -> package resize sensor
-// https://www.npmjs.com/package/sticky-sidebar -> package sticky sidebar
 
 import ResizeSensor from 'css-element-queries/src/ResizeSensor.js';
 import StickySidebar from 'sticky-sidebar/src/sticky-sidebar.js';
 import Glide from '@glidejs/glide';
 // import Glide, { Autoplay } from '@glidejs/glide/dist/glide.modular.esm';
 
-var sidebar = document.querySelectorAll('.sidebar');
-var element = document.querySelector('body');
-
-new ResizeSensor(element, function() {
-    if (element.clientWidth >= 992) {
-        sidebar.forEach(function(s) {
-            new StickySidebar(s, {
-                topSpacing: 104,
-                bottomSpacing: 104,
-                containerSelector: '.main-content',
-                innerWrapperSelector: '.sidebar__inner'
-            });
-        })
-    } 
-});
-
-// Initialization glide package using ES Modules
-// import Glide from '@glidejs/glide';
-
-// new Glide('.glide').mount({ Autoplay })
-
-let glideSlider = document.querySelector('.glide');
-
-if (glideSlider) {
-    new Glide('.glide', {
-        type: 'carousel',
-        gap: 0,
-        autoplay: 4000
-    }).mount();
-}
-
-
-// add active class navigation based on url -> https://stackoverflow.com/questions/20060467/add-active-navigation-class-based-on-url
-
 (function () {
+
+    // add active class navigation based on url
+
     var current = location.pathname.split('/')[1];
     var menuItems = document.querySelectorAll('.menu-item a');
     
@@ -61,11 +28,10 @@ if (glideSlider) {
     }
 })();
 
-
-// burger menu
-// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js 
-
 (function () {
+    
+    // burger menu
+
     let burger_menu = document.querySelector('.burger-menu');
     let nav = document.querySelector('.nav');
     let content = document.querySelector('.header-collapsed');
@@ -75,8 +41,41 @@ if (glideSlider) {
         nav.classList.toggle('collapsed');
         content.classList.toggle('top-to-header');
     })
+
 })();
 
+// initialization slider
 
-// infinity carousel
-// https://codepen.io/hmdshfq/pen/JjrZNgP
+const bodyHasClassHome = document.body.classList.contains('home');
+const bodyHasClassMuseum = document.body.classList.contains('museum-site');
+
+if ( bodyHasClassHome || bodyHasClassMuseum )  {
+    new Glide('.glide', {
+        type: 'slider',
+        startAt: 0,
+        autoplay: 4000
+    }).mount()
+}
+
+// settings package sticky sidebar
+
+const bodyHasClassBio = document.body.classList.contains('bio-site');
+
+if ( bodyHasClassBio ) {
+
+    let sidebar = document.querySelectorAll('.sidebar');
+    let element = document.querySelector('body');
+
+    new ResizeSensor(element, function() {
+        if (element.clientWidth >= 992) {
+            sidebar.forEach(function(s) {
+                new StickySidebar(s, {
+                    topSpacing: 104,
+                    bottomSpacing: 0,
+                    containerSelector: '.main-content',
+                    innerWrapperSelector: '.sidebar__inner'
+                });
+            })
+        } 
+    });
+}
