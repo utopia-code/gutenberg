@@ -5,28 +5,28 @@
 import ResizeSensor from 'css-element-queries/src/ResizeSensor.js';
 import StickySidebar from 'sticky-sidebar/src/sticky-sidebar.js';
 
-document.addEventListener('DOMContentLoaded', function () {
-    const bodyHasClassBio = document.body.classList.contains('bio-site');
+// document.addEventListener('DOMContentLoaded', function () {
+const bodyHasClassBio = document.body.classList.contains('bio-site');
 
-    if ( bodyHasClassBio ) {
+if ( bodyHasClassBio ) {
     
-        let sidebar = document.querySelectorAll('.sidebar');
-        let element = document.querySelector('body');
-    
-        new ResizeSensor(element, function() {
-            if (element.clientWidth >= 992) {
-                sidebar.forEach(function(s) {
-                    new StickySidebar(s, {
-                        topSpacing: 125,
-                        bottomSpacing: 20,
-                        containerSelector: '.main-content',
-                        innerWrapperSelector: '.sidebar__inner'
-                    });
-                })
-            } 
-        });
-    }
-  }, false);
+    let element = document.body;
+
+    new ResizeSensor(element, function() {
+        if (element.clientWidth >= 992) {
+
+            let sidebar = document.querySelectorAll('.sidebar');
+            sidebar.forEach(function(s) {
+                new StickySidebar(s, {
+                    topSpacing: 125,
+                    bottomSpacing: 20,
+                    containerSelector: '.main-content',
+                    innerWrapperSelector: '.sidebar__inner'
+                });
+            })
+        } 
+    });
+}
 
 
 // initialization slider
