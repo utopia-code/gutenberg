@@ -556,7 +556,8 @@ new (0, _resizeSensorJsDefault.default)(element, function() {
 // Initialization glide package using ES Modules
 // import Glide from '@glidejs/glide';
 // new Glide('.glide').mount()
-new (0, _glideModularEsmDefault.default)(".glide", {
+let glideSlider = document.querySelector(".glide");
+if (glideSlider) new (0, _glideModularEsmDefault.default)(".glide", {
     type: "carousel",
     gap: 0,
     autoplay: 4000
@@ -591,7 +592,7 @@ new (0, _glideModularEsmDefault.default)(".glide", {
 })(); // infinity carousel
  // https://codepen.io/hmdshfq/pen/JjrZNgP
 
-},{"css-element-queries/src/ResizeSensor.js":"iWV5z","sticky-sidebar/src/sticky-sidebar.js":"cBIhP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@glidejs/glide/dist/glide.modular.esm":"5Zk4m"}],"iWV5z":[function(require,module,exports) {
+},{"css-element-queries/src/ResizeSensor.js":"iWV5z","sticky-sidebar/src/sticky-sidebar.js":"cBIhP","@glidejs/glide/dist/glide.modular.esm":"5Zk4m","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iWV5z":[function(require,module,exports) {
 "use strict";
 /**
  * Copyright Marc J. Schmidt. See the LICENSE file at the top-level

@@ -28,11 +28,15 @@ new ResizeSensor(element, function() {
 // import Glide from '@glidejs/glide';
 // new Glide('.glide').mount()
 
-new Glide('.glide', {
-    type: 'carousel',
-    gap: 0,
-    autoplay: 4000
-}).mount({ Autoplay });
+let glideSlider = document.querySelector('.glide');
+
+if (glideSlider) {
+    new Glide('.glide', {
+        type: 'carousel',
+        gap: 0,
+        autoplay: 4000
+    }).mount({ Autoplay });
+}
 
 
 // add active class navigation based on url -> https://stackoverflow.com/questions/20060467/add-active-navigation-class-based-on-url
