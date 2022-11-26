@@ -93,7 +93,7 @@ $padding_top_nav: 50px;
         }
     }
     @include mobile-breakpoint {
-        transform: translateY(-100%);
+        transform: translateY(calc(-100% + 58px));
         .nav-open {
             height: 100vh;
             z-index: 0;
