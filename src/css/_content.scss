@@ -211,6 +211,15 @@
             display: block;
             margin: 0 auto 0;
             height: 500px;
+            padding: 10px 0 25px;
+            @media screen and (max-width: 991px) {
+                max-height: 500px;
+                height: auto;
+                padding: 0 0 30px;
+            }
+            @media screen and (max-width: 500px) {
+                max-height: 350px;
+            }
         }
     } 
 }
