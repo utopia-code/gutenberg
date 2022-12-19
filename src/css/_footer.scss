@@ -3,3 +3,38 @@ footer {
     padding-bottom: 2rem;
     font-size: 1rem;
 }
+
+.nav-footer {
+    margin-bottom: 30px;
+    ul {
+        display: flex;
+        justify-content: center;
+        .menu-item {
+            padding: 0 8px;
+            >a {
+                color: #ccc;
+                transition: color .15s ease;
+                &.is-active {
+                    color: #fff;
+                }
+                &:after {
+                    display: none;
+                }
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+    @include mobile-breakpoint {
+        ul {
+            flex-direction: column;
+            .menu-item{
+                padding: 8px 5px;
+                >a {
+                    border-bottom: none;
+                }
+            } 
+        }
+    }
+} 
