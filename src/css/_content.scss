@@ -155,6 +155,9 @@
             }
         }
     }
+    .clip-svg {
+        clip-path: url(#mask);
+    }
 }
 
 .typography-site, .bio-site, .museum-site {
