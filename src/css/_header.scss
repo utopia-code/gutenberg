@@ -1,9 +1,9 @@
 $top_distance_nav: 58px;
 $padding_top_nav: 50px;
+$logo_size: 70px;
 
 .nav {
     position: fixed;
-    // top: $top_distance_nav;
     top: 0;
     background-color: black;
     width: 100%;
@@ -11,12 +11,22 @@ $padding_top_nav: 50px;
     z-index: 1000;
     user-select: none;
     transition: transform .5s cubic-bezier(.25,.46,.45,.94);
-    // transform: translateY(-$top_distance_nav);
     transform: translateY(0);
+    .logo {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        width: $logo_size;
+        height: $logo_size;
+        svg {
+            width: $logo_size;
+            height: $logo_size;
+        }
+    }
     ul {
         margin: 0;
         list-style-type: none;
-        padding-left: 0;
+        padding-left: calc($logo_size + 1rem);
         display: flex;
         overflow: hidden;
         li {
@@ -59,7 +69,7 @@ $padding_top_nav: 50px;
             position: relative;
             overflow: hidden;
         }
-        .logo {
+        .logo-text {
             position: relative;
             top: -3px;
             transition: transform .4s cubic-bezier(.25,.46,.45,.94);
@@ -71,50 +81,43 @@ $padding_top_nav: 50px;
     }
     &.collapsed {
         transition: transform .4s cubic-bezier(.25,.46,.45,.94);
-        // transform: translateY(-100%);
         transform: translateY(-40px);
         .nav-open {
             transition: transform .3s cubic-bezier(.25,.46,.45,.94);
-            // transform: translateY(-$top_distance_nav);
             transform: translateY(-45px);
         }
         .nav-collapsed {
-            .logo {
+            .logo-text {
                 transition: transform .3s cubic-bezier(.25,.46,.45,.94);
                 transform: translateY(0);
             }
         }
     }
     @media screen and (max-width: 991px) {
-        ul {
-            li {
-                padding-right: 1.3rem;
-            }
-        }
-    }
-    @include mobile-breakpoint {
         transform: translateY(calc(-100% + 58px));
         .nav-open {
             height: 100vh;
             z-index: 0;
         }
         .nav-collapsed {
-            .logo {
+            .logo-text {
                 transform: translateY(0);
             }
         }
         ul {
-            padding-top: $padding_top_nav;
+            padding-top: calc($padding_top_nav * 2);
+            padding-left: 1rem;
             flex-direction: column;
             li {
                 padding-top: .725rem;
                 padding-bottom: .625rem;
+                
             }
         }
         &.collapsed {
             transform: translateY(-$top_distance_nav);
             .nav-collapsed {
-                .logo {
+                .logo-text {
                     transform: translateY(100%);
                 }
             }
@@ -130,7 +133,7 @@ $padding_top_nav: 50px;
         transition:  padding-top .4s cubic-bezier(.25,.46,.45,.94);
         padding-top: $top_distance_nav;
     }
-    @include mobile-breakpoint {
+    @media screen and (max-width: 991px) {
         padding-top: 58px;
     }
 }

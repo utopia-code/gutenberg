@@ -157,6 +157,10 @@
     }
     .clip-svg {
         clip-path: url(#mask);
+        display: block;
+    }
+    .c-clip-svg {
+        background-color: red;
     }
 }
 

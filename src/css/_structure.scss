@@ -32,6 +32,9 @@ section {
     &.align-items-center {
         align-items: center;
     }
+    &.mobile-reverse-order {
+        align-items: center;
+    }
     @include mobile-breakpoint {
         &.mobile-reverse-order {
             .col-md-6 {
