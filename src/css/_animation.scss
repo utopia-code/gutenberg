@@ -1,92 +1,166 @@
 #animation {
-    position: absolute;
-    
-    .fill, .no-fill {
-      fill: transparent;
-    } 
-    .letter-v{
-      stroke-dasharray: 1172.10;
-      stroke-dashoffset: 1172.10;
-    }
-    .letter-i {
-      stroke-dasharray: 368;
-      stroke-dashoffset: 368;
-    }
-    .letter-a{
-      stroke-dasharray: 572.10;
-      stroke-dashoffset: 572.10;
-    }
-    .letter-j {
-      stroke-dasharray: 823.42;
-      stroke-dashoffset: 823.42;
-    }
-    .letter-e {
-      stroke-dasharray: 774;
-      stroke-dashoffset: 774;
-    }
-    .letter-n {
-      stroke-dasharray: 1013.42;
-      stroke-dashoffset: 1013.42;
-    }
-    .letter-l {
-      stroke-dasharray: 513.42;
-      stroke-dashoffset: 513.42;
-    }
-    .letter-t {
-      stroke-dasharray: 733.12;
-      stroke-dashoffset: 733.12;
-    }
-    .letter-d{
-      stroke-dasharray: 972.10;
-      stroke-dashoffset: 972.10;
-    }
-    .letter-m{
-      stroke-dasharray: 872.10;
-      stroke-dashoffset: 872.10;
-    }
-    .letter-p {
-      stroke-dasharray: 520.20;
-      stroke-dashoffset: 520.20;
-    }
-    .letter-o {
-      stroke-dasharray: 1066.75;
-      stroke-dashoffset: 1066.75;
-    }
-    .letter-h {
-      stroke-dasharray: 1013.42;
-      stroke-dashoffset: 1013.42;
-    }
-    .letter-c {
-      stroke-dasharray: 921.12;
-      stroke-dashoffset: 921.12;
-    }
-    .letter-r {
-      stroke-dasharray: 721.12;
-      stroke-dashoffset: 721.12;
-    }
-  }
-  
-  @for $i from 1 through 22 {
-    #animation .fill:nth-child(#{$i}) {
-      animation: 
-        line-anim 2s ease forwards calc(#{random(22)} * 0.08s),
-        fill-anim 1.2s ease forwards calc((#{random(22)} * 0.08s) + 2.2s);
-    }
-  }
-  @for $i from 23 through 43 {
-    #animation .no-fill:nth-child(#{$i}) {
-      animation: 
-        line-anim 2s ease forwards calc(#{random(21)} * 0.08s);
-    }
-  }
-  
-  @keyframes line-anim {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-  @keyframes fill-anim {
-    to {
-      fill: white;
-    }
-  }
+	position: absolute;
+	width: calc(100% - 2.50rem);
+
+	.fill, .no-fill {
+		fill: transparent;
+	} 
+	
+	&.a-bio, &.a-typo {
+		.letter-v{
+			stroke-dasharray: 1172.10;
+			stroke-dashoffset: 1172.10;
+		}
+		.letter-i {
+			stroke-dasharray: 368;
+			stroke-dashoffset: 368;
+		}
+		.letter-a{
+			stroke-dasharray: 572.10;
+			stroke-dashoffset: 572.10;
+		}
+		.letter-j {
+			stroke-dasharray: 823.42;
+			stroke-dashoffset: 823.42;
+		}
+		.letter-e {
+			stroke-dasharray: 774;
+			stroke-dashoffset: 774;
+		}
+		.letter-n {
+			stroke-dasharray: 1013.42;
+			stroke-dashoffset: 1013.42;
+		}
+		.letter-l {
+			stroke-dasharray: 513.42;
+			stroke-dashoffset: 513.42;
+		}
+		.letter-t {
+			stroke-dasharray: 733.12;
+			stroke-dashoffset: 733.12;
+		}
+		.letter-d{
+			stroke-dasharray: 972.10;
+			stroke-dashoffset: 972.10;
+		}
+		.letter-m{
+			stroke-dasharray: 872.10;
+			stroke-dashoffset: 872.10;
+		}
+		.letter-p {
+			stroke-dasharray: 520.20;
+			stroke-dashoffset: 520.20;
+		}
+		.letter-o {
+			stroke-dasharray: 1066.75;
+			stroke-dashoffset: 1066.75;
+		}
+		.letter-h {
+			stroke-dasharray: 1013.42;
+			stroke-dashoffset: 1013.42;
+		}
+		.letter-c {
+			stroke-dasharray: 921.12;
+			stroke-dashoffset: 921.12;
+		}
+		.letter-r {
+			stroke-dasharray: 721.12;
+			stroke-dashoffset: 721.12;
+		}
+		.letter-s {
+			stroke-dasharray: 631.82;
+			stroke-dashoffset: 631.82;
+		}
+		.letter-u {
+			stroke-dasharray: 751.57;
+			stroke-dashoffset: 751.57;
+		}
+	}
+
+	&.a-bio {
+		@for $i from 1 through 22 {
+			.fill:nth-child(#{$i}) {
+				animation: 
+					line-anim 2s ease forwards calc(#{random(22)} * 0.08s),
+					fill-anim 1.2s ease forwards calc((#{random(22)} * 0.08s) + 2.2s);
+			}
+		}
+		@for $i from 23 through 43 {
+			.no-fill:nth-child(#{$i}) {
+				animation: 
+					line-anim 2s ease forwards calc(#{random(21)} * 0.08s);
+			}
+		}
+	}
+
+	&.a-typo {
+		@for $i from 1 through 29 {
+			.fill:nth-child(#{$i}) {
+				animation: 
+					line-anim 2s ease forwards calc(#{random(29)} * 0.08s),
+					fill-anim 1.2s ease forwards calc((#{random(29)} * 0.08s) + 2.2s);
+			}
+		  }
+		  @for $i from 30 through 59 {
+			.no-fill:nth-child(#{$i}) {
+				animation: 
+					line-anim 2s ease forwards calc(#{random(30)} * 0.08s);
+			}
+		}
+	}
+	
+	&.a-index {
+		.letter-e {
+			stroke-dasharray: 1229;
+			stroke-dashoffset: 1229;
+		}
+		.letter-n {
+			stroke-dasharray: 1293.42;
+			stroke-dashoffset: 1293.42;
+		}
+		.letter-r {
+			stroke-dasharray: 1021.12;
+			stroke-dashoffset: 1021.12;
+		}
+		.letter-u {
+			stroke-dasharray: 1191.57;
+			stroke-dashoffset: 1191.57;
+		}
+		.letter-g {
+			stroke-dasharray: 1026.9;
+			stroke-dashoffset: 1026.9;
+		}
+		.letter-b {
+			stroke-dasharray: 951.57;
+			stroke-dashoffset: 951.57;
+		}
+		.letter-t {
+			stroke-dasharray: 899.92;
+			stroke-dashoffset: 899.92;
+		}
+		@for $i from 1 through 5 {
+			.fill:nth-child(#{$i}) {
+				animation: 
+					line-anim 2s ease forwards calc(#{random(5)} * 0.2s),
+					fill-anim 1.2s ease forwards calc((#{random(5)} * 0.2s) + 1s);
+			}
+		}
+		@for $i from 6 through 9 {
+			.no-fill:nth-child(#{$i}) {
+				animation: 
+					line-anim 2s ease forwards calc(#{random(4)} * 0.2s);
+			}
+		}
+	}
+}
+
+@keyframes line-anim {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes fill-anim {
+	to {
+		fill: white;
+	}
+}
