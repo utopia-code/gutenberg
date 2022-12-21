@@ -104,6 +104,16 @@ $logo_size: 70px;
                 transform: translateY(0);
             }
         }
+        .logo {
+            top: auto;
+            bottom: 1rem;
+            width: calc(100vw - 40px);
+            height: calc(100vh - 400px);
+            svg {
+                width: calc(100vw - 40px);
+                height: calc(100vh - 400px);
+            }
+        }
         ul {
             padding-top: calc($padding_top_nav * 2);
             padding-left: 1rem;
