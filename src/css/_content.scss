@@ -32,6 +32,19 @@
         font-size: calc(1.2rem + 1.8vw);
         margin-top: 2rem;
     }
+    &.d-mobile {
+        display: none;
+        @media screen and (max-width: 991px) {
+            display: flex;
+        }
+    }
+    
+    &.d-desktop {
+        display: none;
+        @media screen and (min-width: 992px) {
+            display: flex;
+        }
+    }
 }
 
 .home{
