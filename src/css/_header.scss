@@ -36,6 +36,9 @@ $logo_size: 70px;
                 &:hover {
                     color: red;
                 }
+                &::after {
+                    display: none;
+                } 
                 &.is-active {
                     -webkit-text-fill-color: transparent;
                     -webkit-text-stroke-color: red;
@@ -102,9 +105,10 @@ $logo_size: 70px;
         }
         .logo {
             top: auto;
-            bottom: 1rem;
+            bottom: 5rem;
             width: calc(100vw - 40px);
-            height: calc(100vh - 130px);
+            height: 50vh;
+            transition: bottom .15s ease;
         }
         ul {
             padding-top: calc($padding_top_nav * 2);
@@ -122,6 +126,9 @@ $logo_size: 70px;
                 .logo-text {
                     transform: translateY(100%);
                 }
+            }
+            .logo {
+                bottom: 1rem;
             }
         }
     }
