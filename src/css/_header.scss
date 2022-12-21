@@ -18,6 +18,10 @@ $logo_size: 70px;
         left: 20px;
         width: $logo_size;
         height: $logo_size;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
     }
     ul {
         margin: 0;
