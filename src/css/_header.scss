@@ -18,10 +18,6 @@ $logo_size: 70px;
         left: 20px;
         width: $logo_size;
         height: $logo_size;
-        svg {
-            width: $logo_size;
-            height: $logo_size;
-        }
     }
     ul {
         margin: 0;
@@ -109,10 +105,6 @@ $logo_size: 70px;
             bottom: 1rem;
             width: calc(100vw - 40px);
             height: calc(100vh - 400px);
-            svg {
-                width: calc(100vw - 40px);
-                height: calc(100vh - 400px);
-            }
         }
         ul {
             padding-top: calc($padding_top_nav * 2);
