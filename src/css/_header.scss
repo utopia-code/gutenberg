@@ -167,7 +167,9 @@ $logo_size: 70px;
     height: 5px;
     background-color: white;
     margin: 6px 0;
-    transition: 0.4s;
+    opacity: 1;
+    transform: none;
+    transition: transform 0.4s ease, opacity .4s ease;
 }
 
 .change .bar-top {
