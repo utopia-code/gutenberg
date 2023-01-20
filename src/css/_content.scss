@@ -52,6 +52,9 @@
         position: relative;
         width: 100%;
         background-image: url('../images/gutenberg-statue-dom-state-capital-mainz.jpg');
+        @include mobile-breakpoint {
+            background-image: url('../images/gutenberg-statue-dom-state-capital-mainz-mobile.jpg');
+        }
         &::before {
             padding-top: calc(( 7 / 16) * 100%);
             position: relative;
