@@ -2,6 +2,15 @@ footer {
     padding-top: 2rem;
     padding-bottom: 2rem;
     font-size: 1rem;
+    picture img {
+        height: 200px;
+        width: auto;
+    }
+    @include mobile-breakpoint {
+        picture img {
+            height: 150px;
+        }
+    }
 }
 
 .nav-footer {

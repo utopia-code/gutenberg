@@ -6,7 +6,12 @@
         padding-top: 500px;
         background-color: rgba(0,0,0,.2);
     }
-    background-image: url('../images/bg-typography.jpeg');
+    background-image: url('../images/bg/bg-typography.jpeg');
+    background-image: image-set(
+        url("../images/bg/bg-typography.avif") type("image/avif"),
+        url("../images/bg/bg-typography.webp") type("image/webp"),
+        url("../images/bg/bg-typography.jpeg") type("image/jpeg")
+    );
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -51,9 +56,19 @@
     .img-cover {
         position: relative;
         width: 100%;
-        background-image: url('../images/gutenberg-statue-dom-state-capital-mainz.jpg');
+        background-image: url('../images/bg/gutenberg-statue-dom-state-capital-mainz.jpeg');
+        background-image: image-set(
+            url("../images/bg/gutenberg-statue-dom-state-capital-mainz.avif") type("image/avif"),
+            url("../images/bg/gutenberg-statue-dom-state-capital-mainz.webp") type("image/webp"),
+            url("../images/bg/gutenberg-statue-dom-state-capital-mainz.jpeg") type("image/jpeg")
+        );
         @include mobile-breakpoint {
-            background-image: url('../images/gutenberg-statue-dom-state-capital-mainz-mobile.jpg');
+            background-image: url('../images/bg/mobile/gutenberg-statue-dom-state-capital-mainz-mobile.jpg');
+            background-image: image-set(
+            url("../images/bg/mobile/gutenberg-statue-dom-state-capital-mainz-mobile.avif") type("image/avif"),
+            url("../images/bg/mobile/gutenberg-statue-dom-state-capital-mainz-mobile.webp") type("image/webp"),
+            url("../images/bg/mobile/gutenberg-statue-dom-state-capital-mainz-mobile.jpg") type("image/jpg")
+        );
         }
         &::before {
             padding-top: calc(( 7 / 16) * 100%);
@@ -152,15 +167,21 @@
                     border-top: 60px solid red;
                 }
             }
-            @include mobile-breakpoint {
-                .icon-q {
-                    width: 90px;
-                    height: 90px;
-                    &::before {
-                        bottom: -40px;
-                        border-left-width: 40px;
-                        border-top: 40px solid red;
-                    }
+        }
+        @include mobile-breakpoint {
+            .glide__bullets {
+                .glide__bullet {
+                    width: calc(48px - 1rem);
+                    height: calc(48px - 1rem);
+                }
+            }
+            .icon-quotation .icon-q {
+                width: 90px;
+                height: 90px;
+                &::before {
+                    bottom: -40px;
+                    border-left-width: 40px;
+                    border-top: 40px solid red;
                 }
             }
         }
@@ -182,7 +203,12 @@
 
 .typography-site {
     .img-cover {
-        background-image: url('../images/bg-typography.jpeg');
+        background-image: url('../images/bg/bg-typography.jpeg');
+        background-image: image-set(
+            url("../images/bg/bg-typography.avif") type("image/avif"),
+            url("../images/bg/bg-typography.webp") type("image/webp"),
+            url("../images/bg/bg-typography.jpeg") type("image/jpeg")
+        );
     }
     .bg-image-box {
         position: relative;
@@ -199,7 +225,6 @@
             background-image: url('../images/movable-types-www-gutenber.jpg');
         }
         &.museum {
-
             background-image: url('../images/Bundesarchiv-Bild-183-R67584-Duesseldorf-PresseausstellungGutenbergpresse.jpg');
         }
         &.tour {
@@ -212,7 +237,19 @@
 .bio-site {
     .img-cover {
         background-position: top center;
-        background-image: url('../images/Mainz-Gutenbergdenkmal-Relief.jpg');
+        background-image: url('../images/bg/Mainz-Gutenbergdenkmal-Relief.jpeg');
+        background-image: image-set(
+            url("../images/bg/Mainz-Gutenbergdenkmal-Relief.avif") type("image/avif"),
+            url("../images/bg/Mainz-Gutenbergdenkmal-Relief.webp") type("image/webp"),
+            url("../images/bg/Mainz-Gutenbergdenkmal-Relief.jpeg") type("image/jpeg")
+        );
+        @include mobile-breakpoint {
+            background-image: image-set(
+                url("../images/bg/mobile/Mainz-Gutenbergdenkmal-Relief-mobile.avif") type("image/avif"),
+                url("../images/bg/mobile/Mainz-Gutenbergdenkmal-Relief-mobile.webp") type("image/webp"),
+                url("../images/bg/mobile/Mainz-Gutenbergdenkmal-Relief-mobile.jpg") type("image/jpg")
+            );
+        }
     }
     .sidebar {
         .sidebar__inner {
@@ -228,6 +265,7 @@
             display: block;
             margin: 0 auto 0;
             height: 500px;
+            width: auto;
             padding: 10px 0 25px;
             @media screen and (max-width: 991px) {
                 max-height: 500px;
@@ -243,7 +281,19 @@
 
 .museum-site {
     .img-cover {
-        background-image: url('../images/Gutenberg-museum-tresorraum-bibeln.jpg');
+        background-image: url('../images/bg/Gutenberg-museum-tresorraum-bibeln.jpeg');
+        background-image: image-set(
+            url("../images/bg/Gutenberg-museum-tresorraum-bibeln.avif") type("image/avif"),
+            url("../images/bg/Gutenberg-museum-tresorraum-bibeln.webp") type("image/webp"),
+            url("../images/bg/Gutenberg-museum-tresorraum-bibeln.jpeg") type("image/jpeg")
+        );
+        @include mobile-breakpoint {
+            background-image: image-set(
+                url("../images/bg/mobile/Gutenberg-museum-tresorraum-bibeln-mobile.avif") type("image/avif"),
+                url("../images/bg/mobile/Gutenberg-museum-tresorraum-bibeln-mobile.webp") type("image/webp"),
+                url("../images/bg/mobile/Gutenberg-museum-tresorraum-bibeln-mobile.jpg") type("image/jpg")
+            );
+        }
         &::before {
             background-color: rgba(0,0,0,.3);
         }
@@ -319,6 +369,7 @@
             .thumb {
                 flex: 0 0 110px;
                 margin-right: 15px;
+                width: 110px;
             }
             p {
                 flex: 0 0 auto;

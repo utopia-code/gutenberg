@@ -68,9 +68,18 @@ figure {
 
 img {
     max-width: 100%;
+    width: 100%;
+    height: auto;
     &.i-center {
         display: block;
         margin: 0 auto;
+    }
+    &.i-height {
+        width: auto;
+        height: 100%;
+        @include mobile-breakpoint {
+            height: 350px;
+        }
     }
 }
 
