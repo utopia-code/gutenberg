@@ -4,11 +4,12 @@ footer {
     font-size: 1rem;
     picture img {
         height: 200px;
-        width: auto;
+        width: 156px;
     }
     @include mobile-breakpoint {
         picture img {
-            height: 150px;
+            height: 150px !important;
+            width: 117px !important;
         }
     }
 }
