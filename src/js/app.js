@@ -80,3 +80,6 @@ if ( bodyHasClassHome || bodyHasClassMuseum )  {
 
 })();
 
+// import lite-youtube to the proyect
+
+import '@justinribeiro/lite-youtube';
