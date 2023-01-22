@@ -68,18 +68,19 @@ figure {
 
 img {
     max-width: 100%;
-    width: 100%;
-    height: auto;
     &.i-center {
         display: block;
         margin: 0 auto;
     }
-    &.i-height {
-        width: auto;
-        height: 100%;
-        @include mobile-breakpoint {
-            height: 350px;
-        }
+    &.aspect-ratio-vertical {
+        height: 100% !important;
+        width: auto !important;
+        object-fit: cover;
+    }
+    &.aspect-ratio-horizontal {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
     }
 }
 

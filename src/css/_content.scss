@@ -7,11 +7,13 @@
         background-color: rgba(0,0,0,.2);
     }
     background-image: url('../images/bg/bg-typography.jpeg');
-    background-image: image-set(
-        url("../images/bg/bg-typography.avif") type("image/avif"),
-        url("../images/bg/bg-typography.webp") type("image/webp"),
-        url("../images/bg/bg-typography.jpeg") type("image/jpeg")
-    );
+    @-moz-document url-prefix() {
+        background-image: image-set(
+            url("../images/bg/bg-typography.avif") type("image/avif"),
+            url("../images/bg/bg-typography.webp") type("image/webp"),
+            url("../images/bg/bg-typography.jpeg") type("image/jpeg")
+        );  
+    }
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -57,18 +59,22 @@
         position: relative;
         width: 100%;
         background-image: url('../images/bg/gutenberg-statue-dom-state-capital-mainz.jpeg');
-        background-image: image-set(
-            url("../images/bg/gutenberg-statue-dom-state-capital-mainz.avif") type("image/avif"),
-            url("../images/bg/gutenberg-statue-dom-state-capital-mainz.webp") type("image/webp"),
-            url("../images/bg/gutenberg-statue-dom-state-capital-mainz.jpeg") type("image/jpeg")
-        );
+        @-moz-document url-prefix() {
+            background-image: image-set(
+                url("../images/bg/gutenberg-statue-dom-state-capital-mainz.avif") type("image/avif"),
+                url("../images/bg/gutenberg-statue-dom-state-capital-mainz.webp") type("image/webp"),
+                url("../images/bg/gutenberg-statue-dom-state-capital-mainz.jpeg") type("image/jpeg")
+            );
+        }
         @include mobile-breakpoint {
             background-image: url('../images/bg/mobile/gutenberg-statue-dom-state-capital-mainz-mobile.jpg');
-            background-image: image-set(
-            url("../images/bg/mobile/gutenberg-statue-dom-state-capital-mainz-mobile.avif") type("image/avif"),
-            url("../images/bg/mobile/gutenberg-statue-dom-state-capital-mainz-mobile.webp") type("image/webp"),
-            url("../images/bg/mobile/gutenberg-statue-dom-state-capital-mainz-mobile.jpg") type("image/jpg")
-        );
+            @-moz-document url-prefix() {
+                background-image: image-set(
+                    url("../images/bg/mobile/gutenberg-statue-dom-state-capital-mainz-mobile.avif") type("image/avif"),
+                    url("../images/bg/mobile/gutenberg-statue-dom-state-capital-mainz-mobile.webp") type("image/webp"),
+                    url("../images/bg/mobile/gutenberg-statue-dom-state-capital-mainz-mobile.jpg") type("image/jpg")
+                );
+            }
         }
         &::before {
             padding-top: calc(( 7 / 16) * 100%);
@@ -204,11 +210,13 @@
 .typography-site {
     .img-cover {
         background-image: url('../images/bg/bg-typography.jpeg');
-        background-image: image-set(
-            url("../images/bg/bg-typography.avif") type("image/avif"),
-            url("../images/bg/bg-typography.webp") type("image/webp"),
-            url("../images/bg/bg-typography.jpeg") type("image/jpeg")
-        );
+        @-moz-document url-prefix() {
+            background-image: image-set(
+                url("../images/bg/bg-typography.avif") type("image/avif"),
+                url("../images/bg/bg-typography.webp") type("image/webp"),
+                url("../images/bg/bg-typography.jpeg") type("image/jpeg")
+            ); 
+        }
     }
     .bg-image-box {
         position: relative;
@@ -238,17 +246,22 @@
     .img-cover {
         background-position: top center;
         background-image: url('../images/bg/Mainz-Gutenbergdenkmal-Relief.jpeg');
-        background-image: image-set(
-            url("../images/bg/Mainz-Gutenbergdenkmal-Relief.avif") type("image/avif"),
-            url("../images/bg/Mainz-Gutenbergdenkmal-Relief.webp") type("image/webp"),
-            url("../images/bg/Mainz-Gutenbergdenkmal-Relief.jpeg") type("image/jpeg")
-        );
-        @include mobile-breakpoint {
+        @-moz-document url-prefix() {
             background-image: image-set(
-                url("../images/bg/mobile/Mainz-Gutenbergdenkmal-Relief-mobile.avif") type("image/avif"),
-                url("../images/bg/mobile/Mainz-Gutenbergdenkmal-Relief-mobile.webp") type("image/webp"),
-                url("../images/bg/mobile/Mainz-Gutenbergdenkmal-Relief-mobile.jpg") type("image/jpg")
+                url("../images/bg/Mainz-Gutenbergdenkmal-Relief.avif") type("image/avif"),
+                url("../images/bg/Mainz-Gutenbergdenkmal-Relief.webp") type("image/webp"),
+                url("../images/bg/Mainz-Gutenbergdenkmal-Relief.jpeg") type("image/jpeg")
             );
+        }
+        @include mobile-breakpoint {
+            background-image: url('../images/bg/mobile/Mainz-Gutenbergdenkmal-Relief-mobile.jpg');
+            @-moz-document url-prefix() {
+                background-image: image-set(
+                    url("../images/bg/mobile/Mainz-Gutenbergdenkmal-Relief-mobile.avif") type("image/avif"),
+                    url("../images/bg/mobile/Mainz-Gutenbergdenkmal-Relief-mobile.webp") type("image/webp"),
+                    url("../images/bg/mobile/Mainz-Gutenbergdenkmal-Relief-mobile.jpg") type("image/jpg")
+                );
+            }
         }
     }
     .sidebar {
@@ -282,17 +295,22 @@
 .museum-site {
     .img-cover {
         background-image: url('../images/bg/Gutenberg-museum-tresorraum-bibeln.jpeg');
-        background-image: image-set(
-            url("../images/bg/Gutenberg-museum-tresorraum-bibeln.avif") type("image/avif"),
-            url("../images/bg/Gutenberg-museum-tresorraum-bibeln.webp") type("image/webp"),
-            url("../images/bg/Gutenberg-museum-tresorraum-bibeln.jpeg") type("image/jpeg")
-        );
-        @include mobile-breakpoint {
+        @-moz-document url-prefix() {
             background-image: image-set(
-                url("../images/bg/mobile/Gutenberg-museum-tresorraum-bibeln-mobile.avif") type("image/avif"),
-                url("../images/bg/mobile/Gutenberg-museum-tresorraum-bibeln-mobile.webp") type("image/webp"),
-                url("../images/bg/mobile/Gutenberg-museum-tresorraum-bibeln-mobile.jpg") type("image/jpg")
+                url("../images/bg/Gutenberg-museum-tresorraum-bibeln.avif") type("image/avif"),
+                url("../images/bg/Gutenberg-museum-tresorraum-bibeln.webp") type("image/webp"),
+                url("../images/bg/Gutenberg-museum-tresorraum-bibeln.jpeg") type("image/jpeg")
             );
+        }
+        @include mobile-breakpoint {
+            background-image: url('../images/bg/mobile/Gutenberg-museum-tresorraum-bibeln-mobile.jpg');
+            @-moz-document url-prefix() {
+                background-image: image-set(
+                    url("../images/bg/mobile/Gutenberg-museum-tresorraum-bibeln-mobile.avif") type("image/avif"),
+                    url("../images/bg/mobile/Gutenberg-museum-tresorraum-bibeln-mobile.webp") type("image/webp"),
+                    url("../images/bg/mobile/Gutenberg-museum-tresorraum-bibeln-mobile.jpg") type("image/jpg")
+                );
+            }
         }
         &::before {
             background-color: rgba(0,0,0,.3);

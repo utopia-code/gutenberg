@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 sidebar.forEach(function(s) {
                     new StickySidebar(s, {
                         topSpacing: 125,
-                        bottomSpacing: 20,
+                        bottomSpacing: 50,
                         containerSelector: '.main-content',
                         innerWrapperSelector: '.sidebar__inner'
                     });
@@ -76,6 +76,35 @@ if ( bodyHasClassHome || bodyHasClassMuseum )  {
         burger_menu.classList.toggle('change');
         nav.classList.toggle('collapsed');
         content.classList.toggle('top-to-header');
+    })
+
+})();
+
+(function () {
+    
+    // aspect-ratio
+
+    let set_vertical = document.querySelectorAll('.aspect-ratio-vertical');
+    let set_horizontal = document.querySelectorAll('.aspect-ratio-horizontal');
+    let widthH,
+        heightH,
+        widthV,
+        heightV;
+
+    set_horizontal.forEach(function(h) {
+        widthH = h.getAttribute('width');
+        heightH = h.getAttribute('height');
+        h.style.aspectRatio = `${widthH} / ${heightH}`;
+        console.log(widthH);
+        console.log(heightH);
+    })
+
+    set_vertical.forEach(function(v) {
+        widthV = v.getAttribute('width');
+        heightV = v.getAttribute('height');
+        v.style.aspectRatio = `${heightV} / ${widthV}`;
+        console.log(widthV);
+        console.log(heightV);
     })
 
 })();
