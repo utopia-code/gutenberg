@@ -84,27 +84,33 @@ if ( bodyHasClassHome || bodyHasClassMuseum )  {
     
     // aspect-ratio
 
-    let set_vertical = document.querySelectorAll('.aspect-ratio-vertical');
-    let set_horizontal = document.querySelectorAll('.aspect-ratio-horizontal');
-    let widthH,
-        heightH,
-        widthV,
-        heightV;
+    // let set_vertical = document.querySelectorAll('.aspect-ratio-vertical');
+    // let set_horizontal = document.querySelectorAll('.aspect-ratio-horizontal');
+    // let widthH,
+    //     heightH,
+    //     widthV,
+    //     heightV;
 
-    set_horizontal.forEach(function(h) {
-        widthH = h.getAttribute('width');
-        heightH = h.getAttribute('height');
-        h.style.aspectRatio = `${widthH} / ${heightH}`;
-        console.log(widthH);
-        console.log(heightH);
-    })
+    // set_horizontal.forEach(function(h) {
+    //     widthH = h.getAttribute('width');
+    //     heightH = h.getAttribute('height');
+    //     h.style.aspectRatio = `${widthH} / ${heightH}`;
+    // })
 
-    set_vertical.forEach(function(v) {
-        widthV = v.getAttribute('width');
-        heightV = v.getAttribute('height');
-        v.style.aspectRatio = `${heightV} / ${widthV}`;
-        console.log(widthV);
-        console.log(heightV);
+    // set_vertical.forEach(function(v) {
+    //     widthV = v.getAttribute('width');
+    //     heightV = v.getAttribute('height');
+    //     v.style.aspectRatio = `${heightV} / ${widthV}`;
+    // })
+
+    let aspectRatio = document.querySelectorAll('.set-aspect-ratio');
+    let width,
+        height;
+
+        aspectRatio.forEach(function(r) {
+        width = r.getAttribute('width');
+        height = r.getAttribute('height');
+        r.style.aspectRatio = `${width} / ${height}`;
     })
 
 })();
