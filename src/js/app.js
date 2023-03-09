@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 sidebar.forEach(function(s) {
                     new StickySidebar(s, {
                         topSpacing: 125,
-                        bottomSpacing: 50,
+                        bottomSpacing: 0,
                         containerSelector: '.main-content',
                         innerWrapperSelector: '.sidebar__inner'
                     });
@@ -88,7 +88,7 @@ if ( bodyHasClassHome || bodyHasClassMuseum )  {
     let width,
         height;
 
-        aspectRatio.forEach(function(r) {
+    aspectRatio.forEach(function(r) {
         width = r.getAttribute('width');
         height = r.getAttribute('height');
         r.style.aspectRatio = `${width} / ${height}`;
